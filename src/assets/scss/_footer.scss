@@ -1,0 +1,66 @@
+.footer {
+  padding: 4rem 0;
+  position: relative;
+  .footer-absolute-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .footer-boxes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    @media (min-width: 1000px) and (max-width: 1200px) {
+      gap: 0;
+    }
+    @media (min-width: 767px) and (max-width: 1000px) {
+      column-gap: 0;
+      row-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 767px) {
+      column-gap: 0;
+      row-gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer-link {
+    display: block;
+    font-family: "Futura PT Book" !important;
+    font-weight: normal !important;
+    color: #858585 !important;
+    margin-bottom: 24px;
+    font-size: 19px;
+    transition: all 0.4s;
+    &:hover {
+      color: #1babe3 !important;
+    }
+  }
+  .footer-title {
+    font-size: 19px;
+    margin-bottom: 24px;
+  }
+  .footer-phone {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 19px;
+    transition: all 0.4s;
+    &:hover {
+      color: #1babe3;
+    }
+    svg {
+      color: #1babe3;
+      font-size: 19px;
+    }
+  }
+  .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    svg {
+      color: #1babe3;
+      font-size: 24px;
+    }
+  }
+}

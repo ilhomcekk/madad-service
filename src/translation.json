@@ -1,0 +1,8 @@
+{
+  "en": {
+    "greeting": "Hello, {{name}}!"
+  },
+  "fr": {
+    "greeting": "Bonjour, {{name}} !"
+  }
+}

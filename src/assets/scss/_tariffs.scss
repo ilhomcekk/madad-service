@@ -1,0 +1,107 @@
+.tarif-header {
+  height: 570px;
+  width: 100%;
+  background: url("../images/tarif.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background: rgba(27, 171, 227, 0.72);
+  // }
+  @media (max-width: 767px){
+    height: 250px;
+  }
+  .header-text {
+    font-size: 90px;
+    color: #fff;
+    line-height: 1;
+    @media (min-width: 767px) and (max-width: 1000px){
+      font-size: 72px;
+    }
+    @media (max-width: 767px){
+      font-size: 34px;
+    }
+  }
+}
+.tariffs {
+  position: relative;
+}
+.tarif-absolute-image {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+}
+.tariffs-slick {
+  position: relative;
+  overflow-x: hidden;
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-slide {
+    display: table-cell;
+    > div {
+      margin: 0 10px;
+    }
+  }
+  .slick-prev {
+    position: absolute;
+    bottom: 0;
+    left: 46%;
+    transform: translate(-50%, 0%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (min-width: 767px) and (max-width: 1000px){
+      left: 43%;
+    }
+    @media (max-width: 767px){
+      left: 36%;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-next {
+    position: absolute;
+    bottom: 0;
+    left: 54%;
+    transform: translate(-50%, 0%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (min-width: 767px) and (max-width: 1000px){
+      left: 57%;
+    }
+    @media (max-width: 767px){
+      left: 64%;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-disabled {
+    color: #bebebe;
+    border-color: #bebebe;
+    cursor: inherit;
+  }
+}

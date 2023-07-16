@@ -1,0 +1,774 @@
+.header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .header-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    .header-logo {
+      width: 350px;
+      min-width: 350px;
+      height: 350px;
+      @media (max-width: 767px) {
+        width: 250px;
+        min-width: 250px;
+        height: 250px;
+      }
+    }
+    .header-desc {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      font-size: 20px;
+      color: #fff;
+      @media (max-width: 767px) {
+        font-size: 16px;
+        font-family: "Futura PT Book" !important;
+        font-weight: normal !important;
+        line-height: 1;
+        column-gap: 10px;
+      }
+      img {
+        width: 45px;
+        min-width: 45px;
+        height: 45px;
+        @media (max-width: 767px) {
+          width: 30px;
+          min-width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .header-send {
+      padding: 12px 2rem !important;
+      background: #1babe3 !important;
+      color: #fff !important;
+      border-radius: 12px !important;
+      margin-top: 5rem;
+    }
+    .header-arrow {
+      min-width: 81px;
+      width: 81px;
+      height: 81px;
+      padding: 0 !important;
+      background: #1babe3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -5rem;
+      margin-top: 5rem;
+      svg {
+        font-size: 42px;
+        color: #fff;
+      }
+    }
+  }
+}
+.direction {
+  padding-bottom: 5rem;
+  @media (max-width: 767px) {
+    padding-bottom: 0;
+  }
+}
+.direction-block {
+  display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 767px) {
+    flex-direction: row;
+    padding-bottom: 3rem;
+  }
+  .direction-left {
+    min-width: 48%;
+    width: 48%;
+    height: 695px;
+    background: #1babe3;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 1000px) and (max-width: 1200px) {
+      min-width: 37%;
+      width: 37%;
+      height: 900px;
+    }
+    @media (max-width: 1000px) {
+      min-width: 100%;
+      width: 100%;
+      height: 705px;
+    }
+    @media (max-width: 767px) {
+      padding: 1.2rem 0.5rem 0 0.5rem;
+      min-width: 48%;
+      width: 48%;
+      height: 510px;
+    }
+    .left__title {
+      font-size: 40px;
+      color: #fff;
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+    .left__boxes {
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      right: 2rem;
+      transform: translate(0%, -50%);
+      @media (min-width: 1000px) and (max-width: 1200px) {
+        position: relative;
+        transform: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+      }
+      @media (max-width: 1000px) {
+        position: relative;
+        transform: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        padding-top: 3rem;
+      }
+      @media (max-width: 767px) {
+        padding-top: 1rem;
+      }
+      .left__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1.5rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        @media (min-width: 1000px) and (max-width: 1200px) {
+          grid-template-columns: 1fr;
+        }
+        @media (max-width: 767px) {
+          grid-template-columns: 1fr;
+          row-gap: 1.5rem;
+        }
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 1.5rem;
+          padding: 0 1.5rem;
+          color: #fff;
+          font-family: "Futura PT Book" !important;
+          font-weight: normal !important;
+          background: transparent;
+          transition: background 500ms;
+          cursor: pointer;
+          &:hover {
+            background: rgba($color: #fff, $alpha: 0.1);
+          }
+          &.active {
+            background: rgba($color: #fff, $alpha: 0.1);
+          }
+          &.right-border {
+            @media (min-width: 767px) {
+              border-right: 1px solid rgba(255, 255, 255, 0.4);
+            }
+          }
+          @media (min-width: 1000px) and (max-width: 1200px) {
+            padding-top: 1rem;
+          }
+          @media (max-width: 767px) {
+            padding: 0 0.5rem;
+            gap: 0.5rem;
+            font-size: 12px;
+          }
+          .image {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              max-height: 100%;
+            }
+            @media (min-width: 1000px) and (max-width: 1200px) {
+              height: 100px;
+            }
+            @media (max-width: 767px) {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .direction-right {
+    min-width: 52%;
+    width: 52%;
+    padding: 3rem 0;
+    position: relative;
+    @media (min-width: 1000px) and (max-width: 1200px) {
+      min-width: 63%;
+      width: 63%;
+    }
+    @media (max-width: 1000px) {
+      min-width: 100%;
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      min-width: 52%;
+      width: 52%;
+    }
+    .right-absolute-image {
+      position: absolute;
+      left: -200px;
+      bottom: 0;
+    }
+    .right-image {
+      position: relative;
+      img {
+        min-width: 108%;
+        width: 108%;
+        margin-left: -2%;
+        @media (max-width: 1000px) {
+          min-width: 100%;
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+    .right-absolute-text {
+      position: absolute;
+      bottom: 0;
+      font-size: 90px;
+      color: #fff;
+      line-height: 1;
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+    .right-title {
+      font-size: 90px;
+      line-height: 1;
+      position: relative;
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+    .right-desc {
+      @media (max-width: 767px) {
+        font-size: 14px;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+.about {
+  position: relative;
+  padding: 5rem 0;
+  @media (max-width: 767px) {
+    padding: 3rem 0 7rem 0;
+  }
+  .about-absolute-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+  }
+  .about-left-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 400px;
+  }
+  .about-container {
+    position: relative;
+    padding-top: 6rem;
+    margin-top: 4rem;
+    @media (max-width: 767px) {
+      padding-top: 3rem;
+      margin-top: 3rem;
+    }
+  }
+  .about-card {
+    width: 85%;
+    min-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 767px) {
+      width: 100%;
+      min-width: 100%;
+    }
+    .card-item {
+      width: 80%;
+      padding: 3rem;
+      margin-left: auto;
+      background: #ffffff;
+      box-shadow: 0px 1px 17px rgba(198, 198, 198, 0.31);
+      border-radius: 20px;
+      @media (max-width: 767px) {
+        width: 85%;
+        padding: 1.2rem 0.5rem;
+      }
+      .item__title {
+        font-size: 27px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      .item__text {
+        color: #858585;
+        margin: 1.5rem 0;
+        font-size: 19px;
+        @media (max-width: 767px) {
+          font-size: 14px;
+          font-family: "Futura PT Book" !important;
+          font-weight: normal !important;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .show-more {
+        @media (max-width: 767px) {
+          font-size: 12px;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+  .about-slick {
+    position: relative;
+    margin-top: 3rem;
+    .slick-list {
+      width: 85%;
+      overflow-x: hidden;
+      margin: 0 -10px;
+      @media (max-width: 767px) {
+        width: 100%;
+        margin: unset;
+      }
+    }
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      font-size: 45px;
+      color: #1babe3;
+      transition: all 0.4s;
+      cursor: pointer;
+      @media (max-width: 767px) {
+        top: 105%;
+      }
+    }
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 45px;
+      color: #1babe3;
+      transition: all 0.4s;
+      cursor: pointer;
+      @media (max-width: 767px) {
+        top: 105%;
+      }
+    }
+    .slick-disabled {
+      color: #bebebe;
+      cursor: inherit;
+    }
+    .slick-slide {
+      height: 210px;
+      max-height: 210px;
+      display: table-cell;
+      @media (max-width: 767px) {
+        height: 130px;
+        max-height: 130px;
+      }
+      > div {
+        margin: 0 10px;
+      }
+      a {
+        outline: none;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(27, 171, 227, 0);
+          border-radius: 20px;
+          z-index: 1;
+          transition: all 0.4s;
+        }
+        &:hover {
+          &::before {
+            background: rgba(27, 171, 227, 0.72);
+          }
+          img {
+            scale: 1.3;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transition: all 0.4s;
+      }
+    }
+  }
+}
+
+.goal {
+  position: relative;
+  padding-bottom: 5rem;
+  .goal-absolute-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+  .goal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+    min-height: 310px;
+    position: relative;
+    .card__image {
+      min-width: 85px;
+      width: 85px;
+      height: 85px;
+      border-radius: 20px;
+      background: #1babe3;
+      box-shadow: 0px 1px 17px rgba(27, 171, 227, 0.25);
+    }
+    .card__title {
+      margin: 20px 0;
+      font-size: 23px;
+    }
+    .card__text {
+      font-size: 18px;
+      color: #858585 !important;
+      font-family: "Futura PT Book" !important;
+      font-weight: normal !important;
+    }
+  }
+}
+
+.feedback {
+  padding: 5rem 0;
+  background: #1babe3;
+  position: relative;
+  .feedback-image {
+    height: 100%;
+    width: auto;
+    border-radius: 4px;
+    @media (max-width: 767px) {
+      height: 200px;
+    }
+  }
+  ._phone-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #95e1ff !important;
+    .special-label {
+      color: #95e1ff !important;
+      font-size: 20px;
+      font-family: "Futura PT Book" !important;
+      font-weight: normal !important;
+    }
+    .form-control {
+      border: none;
+      padding: 8px 0;
+      color: #fff;
+      background: transparent;
+      font-family: "Futura PT Book" !important;
+      font-weight: normal !important;
+      font-size: 20px;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    .flag-dropdown {
+      display: none;
+    }
+  }
+  .feedback-input {
+    label {
+      color: #95e1ff !important;
+      font-size: 20px;
+      font-family: "Futura PT Book" !important;
+      font-weight: normal !important;
+    }
+    .css-o943dk-MuiFormLabel-root-MuiInputLabel-root,
+    .css-1rgmeur {
+      transform: unset !important;
+    }
+    > div {
+      background: unset !important;
+      padding-left: 0 !important;
+      &::after {
+        border-bottom: 1px solid #95e1ff !important;
+      }
+      &.Mui-focused {
+        background: unset !important;
+      }
+    }
+    textarea {
+      margin-top: 1rem;
+      font-size: 20px;
+      color: #fff;
+      font-family: "Futura PT Book" !important;
+      font-weight: normal !important;
+      &::placeholder {
+        font-family: "Futura PT Book" !important;
+        font-weight: normal !important;
+        font-size: 20px;
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+  .feedback-send {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: auto;
+    @media (max-width: 767px) {
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      margin-left: unset;
+    }
+    &:hover {
+      svg {
+        transform: rotate(-45deg);
+        color: #1976d2;
+      }
+    }
+    svg {
+      font-size: 42px;
+      color: #fff;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.services {
+  padding: 5rem 0;
+  position: relative;
+  .services-absolute-image {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+  }
+  .category-tab {
+    background: #fff;
+    color: #1babe3;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 22px;
+    box-shadow: unset;
+    border: 1px solid #1babe3;
+    transition: all 0.4s;
+    &:hover {
+      background: rgba(27, 171, 227, 0.25);
+    }
+    &.active {
+      color: #fff;
+      background: #1babe3;
+      box-shadow: 0px 1px 17px rgba(27, 171, 227, 0.25);
+    }
+    @media (max-width: 767px) {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+  }
+}
+
+.news {
+  position: relative;
+  padding-bottom: 5rem;
+  .news-absolute-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  .slick-prev {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      top: unset;
+      bottom: 75px;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-next {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      top: unset;
+      bottom: 75px;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-disabled {
+    color: #bebebe;
+    border-color: #bebebe;
+    cursor: inherit;
+  }
+  .news-slick {
+    overflow: hidden;
+    .slick-list {
+      margin: 0 -10px;
+    }
+    .slick-slide {
+      display: table-cell;
+      > div {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.partners {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 620px;
+  background: url("../images/partners-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 88px 0;
+  .slick-prev {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      top: unset;
+      bottom: -55px;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-next {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #1babe3;
+    color: #1babe3;
+    transition: all 0.4s;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      top: unset;
+      bottom: -55px;
+    }
+    svg {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .slick-disabled {
+    color: #bebebe;
+    border-color: #bebebe;
+    cursor: inherit;
+  }
+  .partners-slick {
+    overflow: hidden;
+    .slick-list {
+      margin: 0 -10px;
+    }
+    .slick-slide {
+      display: table-cell;
+      vertical-align: middle;
+      > div {
+        margin: 0 10px;
+      }
+    }
+  }
+  .partners-box {
+    background: #ffffff;
+    border-radius: 20px;
+    height: 180px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      border-radius: 20px;
+      filter: grayscale(1);
+      transition: all 0.4s;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.contacts-page-absolute-image-2 {
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+}
+.contacts-container {
+  position: relative;
+}
+.contacts-box {
+  position: relative;
+  .box-first {
+    width: 65%;
+    min-width: 65%;
+    @media (max-width: 1000px) {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  .box-last {
+    width: 35%;
+    min-width: 35%;
+    padding-left: 1rem;
+    @media (min-width: 767px) and (max-width: 1000px) {
+      width: 60%;
+      min-width: 60%;
+      margin: 3rem auto 0 auto;
+      padding-left: 0;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      min-width: 100%;
+      margin-top: 3rem;
+      padding-left: 0;
+    }
+  }
+  .map {
+    position: relative;
+    border-radius: 30px;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   background: linear-gradient(
+    //     0deg,
+    //     rgba(27, 171, 227, 0.53),
+    //     rgba(27, 171, 227, 0.53)
+    //   );
+    //   border-radius: 30px;
+    //   z-index: 1;
+    // }
+  }
+  .contact-box {
+    background: #fff;
+    box-shadow: 0px 1px 17px rgba(235, 235, 235, 0.25);
+    border-radius: 30px;
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  .contact-block {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 1rem;
+    svg {
+      min-width: 28px;
+      width: 28px;
+      height: 28px;
+      font-size: 28px;
+      color: #1babe3;
+    }
+    .block-title {
+      font-size: 20px;
+    }
+  }
+  .send-card {
+    background: #1babe3;
+    border-radius: 30px;
+    padding: 2.5rem;
+    .contact-input {
+      width: 100%;
+      margin-bottom: 1.5rem !important;
+
+      label {
+        color: #f1f1f1 !important;
+        font-size: 17px;
+        font-family: "Futura PT Book" !important;
+        font-weight: normal !important;
+      }
+      .css-o943dk-MuiFormLabel-root-MuiInputLabel-root {
+        transform: unset !important;
+      }
+      > div {
+        background: unset !important;
+        padding-left: 0 !important;
+        &::after {
+          border-bottom: 1px solid #f1f1f1 !important;
+        }
+        &.Mui-focused {
+          background: unset !important;
+        }
+      }
+      textarea {
+        margin-top: 1rem;
+        font-size: 20px;
+        color: #fff;
+        font-family: "Futura PT Book" !important;
+        font-weight: normal !important;
+        &::placeholder {
+          font-family: "Futura PT Book" !important;
+          font-weight: normal !important;
+          font-size: 20px;
+          color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+    .contact-send {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 12px;
+      color: #fff;
+      font-size: 19px;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      &:hover {
+        .svg svg {
+          transform: rotate(-45deg);
+        }
+      }
+      .svg {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+        svg {
+          color: #fff;
+          font-size: 18px;
+          stroke-width: 1;
+          transition: all 0.4s;
+        }
+      }
+    }
+  }
+}
