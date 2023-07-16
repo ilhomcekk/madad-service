@@ -10,6 +10,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import ru from "../../assets/images/ru.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { getPartners } from "../../redux/actions/partnersActions";
+const API = "https://api.madad-service.uz/";
 
 const Partners = () => {
   const dispatch = useDispatch();
@@ -82,7 +83,7 @@ const Partners = () => {
                 alt=""
               /> */}
               <LazyLoadImage
-                src={"http://188.93.210.225:5000/" + item?.photo}
+                src={API + item?.photo}
                 alt=""
               />
             </Link>

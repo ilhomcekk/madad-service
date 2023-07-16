@@ -25,7 +25,7 @@ const packageData = (data) => {
   return form;
 };
 
-const API = "http://188.93.210.225:5000";
+const API = "https://api.madad-service.uz";
 
 axios.interceptors.request.use(
   function (config) {

@@ -10,6 +10,7 @@ import Feedback from "../../components/feedback/Feedback";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdvertising } from "../../redux/actions/advertisingActions";
 import TranslationApi from "../../components/translation/TranslationApi";
+const API = "https://api.madad-service.uz/";
 
 const Offer = () => {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const Offer = () => {
           <div className="offer-slide" key={idx}>
             {/* <LazyLoadImage src={offerSlide} alt="" /> */}
             <LazyLoadImage
-              src={"http://188.93.210.225:5000/" + item?.photo}
+              src={API + item?.photo}
               alt=""
             />
             <Container className="offer-slide-container">

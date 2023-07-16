@@ -10,6 +10,7 @@ import offerAbsoluteImage from "../../assets/images/offer-absolute.png";
 import Title from "../title/Title";
 import { getOffers } from "../../redux/actions/offersActions";
 import TranslationApi from "../translation/TranslationApi";
+const API = "https://api.madad-service.uz/";
 
 const Offer = () => {
   const dispatch = useDispatch();
@@ -68,7 +69,7 @@ const Offer = () => {
               /> */}
               <LazyLoadImage
                 className="box__image"
-                src={"http://188.93.210.225:5000/" + item?.photo}
+                src={API + item?.photo}
                 alt=""
                 style={{ width: "350px", height: "350px" }}
               />

@@ -4,6 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import "../../assets/scss/_carts.scss";
 import TranslationApi from "../translation/TranslationApi";
+const API = "https://api.madad-service.uz/";
 
 const NewsCart = ({ cart, attribute }) => {
   return (
@@ -15,7 +16,7 @@ const NewsCart = ({ cart, attribute }) => {
       /> */}
       <LazyLoadImage
         className="cart__image"
-        src={"http://188.93.210.225:5000/" + cart?.photo}
+        src={API + cart?.photo}
         alt=""
         style={{ width: "350px", height: "350px" }}
       />

@@ -20,7 +20,7 @@ import { getTariffsServicesByCategory } from "../../redux/actions/tariffsService
 import TarifModal from "../../components/modal/TarifModal";
 import { setTarifStep } from "../../redux/actions/telegramActions";
 import TranslationApi from "../../components/translation/TranslationApi";
-const API = "http://188.93.210.225:5000/";
+const API = "https://api.madad-service.uz/";
 
 const Tariffs = () => {
   const dispatch = useDispatch();

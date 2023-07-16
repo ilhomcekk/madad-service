@@ -19,6 +19,7 @@ import Avatar from "../../assets/images/avatar.png";
 import HTMLReactParser from "html-react-parser";
 import { toast } from "react-toastify";
 import TranslationApi from "../../components/translation/TranslationApi";
+const API = "https://api.madad-service.uz/";
 
 const NewsDetail = () => {
   const dispatch = useDispatch();
@@ -144,7 +145,7 @@ const NewsDetail = () => {
                   borderRadius: "20px",
                   objectFit: "contain",
                 }}
-                src={"http://188.93.210.225:5000/" + data?.photo}
+                src={API + data?.photo}
                 alt=""
               />
               <div className="color-gray font-400 mt-6">

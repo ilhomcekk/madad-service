@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import TranslationApi from "../translation/TranslationApi";
 import HTMLReactParser from "html-react-parser";
-const API = "http://188.93.210.225:5000/";
+const API = "https://api.madad-service.uz/";
 
 const Direction = () => {
   const list = useSelector((state) => state.category.category);
