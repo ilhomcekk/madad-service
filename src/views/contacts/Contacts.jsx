@@ -15,7 +15,7 @@ import Feedback from "../../components/feedback/Feedback";
 import { BsArrowRight, BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiMap } from "react-icons/bi";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { Button, TextField } from "@mui/material";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
@@ -171,14 +171,17 @@ const Contacts = () => {
                 <div className="contact-box">
                   <div className="text-2xl color-blue mb-4">Соц.сети</div>
                   <div className="contacts-icon flex items-center gap-4">
-                    <a href="#">
+                    <a href="https://www.facebook.com/Madad-Service-111374008089763/?ref=pages_you_manage">
                       <FaFacebook color="#1babe3" size={28} />
                     </a>
-                    <a href="#">
+                    <a href="https://t.me/madad_service">
                       <FaTelegramPlane color="#1babe3" size={28} />
                     </a>
-                    <a href="#">
+                    <a href="https://instagram.com/madad_service?igshid=YmMyMTA2M2Y=">
                       <AiFillInstagram color="#1babe3" size={28} />
+                    </a>
+                    <a href="https://www.youtube.com/@madadservice">
+                      <AiFillYoutube color="#1babe3" size={28} />
                     </a>
                   </div>
                 </div>

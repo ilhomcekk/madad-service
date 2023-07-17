@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import footerAbsoluteImage from "../../assets/images/footer-absolute.png";
 import footerLogo from "../../assets/images/no-home-logo.svg";
 import { FaFacebook, FaTelegramPlane } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import "../../assets/scss/_footer.scss";
 
 const Footer = () => {
@@ -53,14 +53,17 @@ const Footer = () => {
           <div className="footer-box">
             <div className="footer-title">Соц.сети</div>
             <div className="footer-icons">
-              <a href="#">
+              <a href="https://www.facebook.com/Madad-Service-111374008089763/?ref=pages_you_manage">
                 <FaFacebook />
               </a>
-              <a href="#">
+              <a href="https://t.me/madad_service">
                 <FaTelegramPlane />
               </a>
-              <a href="#">
+              <a href="https://instagram.com/madad_service?igshid=YmMyMTA2M2Y=">
                 <AiFillInstagram />
+              </a>
+              <a href="https://www.youtube.com/@madadservice">
+                <AiFillYoutube />
               </a>
             </div>
           </div>

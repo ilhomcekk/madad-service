@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TranslationApi from "../translation/TranslationApi";
 import TarifModal from "../modal/TarifModal";
 import { setTarifStep } from "../../redux/actions/telegramActions";
+const API = "https://api.madad-service.uz/";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -69,7 +70,11 @@ const Header = () => {
           >
             {categories?.map((item, idx) => (
               <Link key={idx} to={""} className="header-desc">
-                <LazyLoadImage src={headerDesc1} alt="" />
+                <LazyLoadImage
+                  src={API + item?.photo}
+                  style={{ objectFit: "contain" }}
+                  alt=""
+                />
                 <TranslationApi
                   ru={item?.name_ru}
                   uz={item?.name_uz}

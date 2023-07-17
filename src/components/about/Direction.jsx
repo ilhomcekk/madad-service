@@ -29,7 +29,6 @@ const Direction = () => {
     setDesc(filter);
   };
   handleService();
-  console.log("tab", tab);
 
   return (
     <section className="direction">
