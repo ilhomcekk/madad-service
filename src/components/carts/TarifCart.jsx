@@ -19,7 +19,9 @@ const TarifCart = ({ cart, handleClick }) => {
           <li key={idx}>{item} </li>
         ))}
       </ul>
-      <div className="tarif-price">{num?.toLocaleString("de-DE")} сум</div>
+      <div className="tarif-price">
+        {num === 0 ? "Договорная" : num?.toLocaleString("de-DE") + " сум"}
+      </div>
       <div className="tarif-link" onClick={handleClick}>
         Оставить заявку
         <div className="svg">

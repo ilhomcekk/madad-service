@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 import { Container } from "@mui/system";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Slider from "react-slick";
 import offerAbsoluteImage from "../../assets/images/offer-absolute.png";
 import Title from "../title/Title";
@@ -13,13 +13,28 @@ import TranslationApi from "../translation/TranslationApi";
 const API = "https://api.madad-service.uz/";
 
 const Offer = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
+  const [params, setParams] = useState({
+    page: 1,
+    "per-page": 24,
+  });
+
+  const [offersByCategory, setOffersByCategory] = useState([]);
+  const offers = useSelector((state) => state.offers.offers);
 
   useEffect(() => {
-    dispatch(getOffers());
+    dispatch(getOffers(params));
   }, []);
 
-  const offers = useSelector((state) => state.offers.offers);
+  const handleFilter = async () => {
+    let filter = await offers?.filter((item) => item?.category?._id === id);
+    if (filter?.length > 0) setOffersByCategory(filter);
+  };
+
+  useEffect(() => {
+    handleFilter();
+  }, [offersByCategory]);
 
   const settings = {
     dots: false,
@@ -60,7 +75,7 @@ const Offer = () => {
         <Title title="СПЕЦИАЛЬНЫЕ" />
         <Title title="ПРЕДЛОЖЕНИЯ" className="text-right" />
         <Slider className="offer-component-slick my-12" {...settings}>
-          {offers?.map((item, idx) => (
+          {offersByCategory?.map((item, idx) => (
             <Link key={idx} to="" className="offer-box">
               {/* <LazyLoadImage
                 className="box__image"

@@ -22,7 +22,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const [modal, setModal] = useState();
   const [modalData, setModalData] = useState({
-    name_ru: "Не выбрано",
     price: "Не выбрано",
     category: {
       name_ru: "Не выбрано",

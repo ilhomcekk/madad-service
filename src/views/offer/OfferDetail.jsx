@@ -15,25 +15,33 @@ import {
 import TranslationApi from "../../components/translation/TranslationApi";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import OfferServices from "../../components/services/OfferServices";
 const API = "https://api.madad-service.uz/";
 
 const OfferDetail = () => {
   const { id } = useParams();
-  console.log(id);
   const dispatch = useDispatch();
 
   const [params, setParams] = useState({
     page: 1,
-    "per-page": 12,
+    "per-page": 24,
   });
+  const [advertisingByCategory, setAdvertisingByCategory] = useState([]);
+
+  const advertising = useSelector((state) => state.advertising.advertising);
+  const handleFilter = async () => {
+    let filter = await advertising?.filter(
+      (item) => item?.category?._id === id
+    );
+    if (filter?.length > 0) setAdvertisingByCategory(filter);
+  };
 
   useEffect(() => {
-    dispatch(getAdvertisingByCategory(id));
+    dispatch(getAdvertising(params));
   }, [id]);
-
-  const advertisingByCategory = useSelector(
-    (state) => state.advertising.advertisingByCategory
-  );
+  useEffect(() => {
+    handleFilter();
+  }, [advertising]);
 
   const settings = {
     dots: true,
@@ -74,7 +82,8 @@ const OfferDetail = () => {
         ))}
       </Slider>
       <OfferComponent />
-      <Services />
+      <OfferServices />
+      {/* <Services /> */}
       <Feedback />
     </div>
   );

@@ -62,7 +62,7 @@ const Offer = () => {
           </div>
         ))}
       </Slider>
-      <OfferComponent />
+      {/* <OfferComponent /> */}
       <Services />
       <Feedback />
     </div>

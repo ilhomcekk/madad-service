@@ -237,3 +237,23 @@
     }
   }
 }
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding-right: 1rem;
+  @media (max-width: 769px) {
+    display: none;
+  }
+}
+
+.navbar-discount {
+  background: #1babe3;
+  padding: 8px 12px;
+  border-radius: 8px;
+  column-gap: 6px;
+}
+.css-79ws1d-MuiModal-root{
+  z-index: 99999 !important;
+}

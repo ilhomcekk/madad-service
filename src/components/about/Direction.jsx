@@ -19,7 +19,7 @@ const Direction = () => {
   const [tab, setTab] = useState();
   const [desc, setDesc] = useState();
   useEffect(() => {
-    setTab(list[0]);
+    setTab(list[1]);
   }, [list]);
 
   const handleService = async () => {
@@ -63,7 +63,9 @@ const Direction = () => {
                     )}
                     {list[1] && (
                       <div
-                        className={`box ${tab?._id === list[1]?._id && 'active'}`}
+                        className={`box ${
+                          tab?._id === list[1]?._id && "active"
+                        }`}
                         onClick={() => setTab(list[1])}
                       >
                         <div className="image">
@@ -157,7 +159,7 @@ const Direction = () => {
               alt=""
             />
             <div className="right-image">
-              <LazyLoadImage src={directionImage} alt="" />
+              <LazyLoadImage src={API + desc?.photo} alt="" />
               <div
                 className="right-absolute-text md:pl-8 pl-0"
                 data-aos="fade-up"
