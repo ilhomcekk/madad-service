@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NewsSearch from "./views/news/NewsSearch";
+import OfferDetail from "./views/offer/OfferDetail";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const App = () => {
       <Routes path="/">
         <Route path="/" element={<Home />} />
         <Route path="/offer" element={<Offer />} />
+        <Route path="/offer/:id" element={<OfferDetail />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/search/:slug" element={<NewsSearch />} />
         <Route path="/news/:id" element={<NewsDetail />} />

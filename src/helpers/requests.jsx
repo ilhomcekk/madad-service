@@ -61,6 +61,10 @@ const request = {
   getDetailOffers: (id) => axios.get(`${API}/offers/${id}`),
   // Advertising
   getAdvertising: (params) => axios.get(`${API}/advertisings`, { params }),
+  getAdvertisingByCategory: (id, params) =>
+    axios.get(`${API}/advertisings/category_id/${id}`, {
+      params,
+    }),
   getDetailAdvertising: (id) => axios.get(`${API}/advertisings/${id}`),
   // Partners
   getPartners: (params) => axios.get(`${API}/partners`, { params }),

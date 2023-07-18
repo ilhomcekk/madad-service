@@ -14,6 +14,29 @@ export const getDetailAdvertising = (id) => (dispatch) => {
     });
 };
 
+export const getAdvertisingByCategory = (id, params) => (dispatch) => {
+  dispatch({
+    type: "fetch_advertising_by_category_start",
+    payload: id,
+    params,
+  });
+
+  requests
+    .getAdvertisingByCategory(id, params)
+    .then(({ data }) => {
+      dispatch({
+        type: "fetch_advertising_by_category_success",
+        payload: data,
+      });
+    })
+    .catch(({ response }) => {
+      dispatch({
+        type: "fetch_advertising_by_category_error",
+        payload: response,
+      });
+    });
+};
+
 export const getAdvertising = (params) => (dispatch) => {
   dispatch({ type: "fetch_advertising_start", payload: params });
 

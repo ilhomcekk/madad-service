@@ -69,7 +69,11 @@ const Header = () => {
             data-aos-delay="2500"
           >
             {categories?.map((item, idx) => (
-              <Link key={idx} to={""} className="header-desc">
+              <Link
+                key={idx}
+                to={"/offer/" + item?._id}
+                className="header-desc"
+              >
                 <LazyLoadImage
                   src={API + item?.photo}
                   style={{ objectFit: "contain" }}
