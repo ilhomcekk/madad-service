@@ -86,7 +86,7 @@ const NavbarIcons = () => {
         data-aos-delay="1500"
       >
         <a
-          className="flex items-center text-white gap-2"
+          className="navbar-phone flex items-center gap-2"
           href="tel:+998930020333"
         >
           <BsTelephone size={24} color="#fff" />

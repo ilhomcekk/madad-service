@@ -18,7 +18,7 @@ const Services = () => {
 
   useEffect(() => {
     dispatch(getCategory());
-    dispatch(getServices());
+    dispatch(getServices({ page: 1, limit: 40 }));
   }, []);
 
   const categories = useSelector((state) => state.category.category);

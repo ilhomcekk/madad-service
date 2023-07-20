@@ -29,8 +29,8 @@ const OfferDetail = () => {
   const [advertisingByCategory, setAdvertisingByCategory] = useState([]);
 
   const advertising = useSelector((state) => state.advertising.advertising);
-  const handleFilter = async () => {
-    let filter = await advertising?.filter(
+  const handleFilter = () => {
+    let filter = advertising?.filter(
       (item) => item?.category?._id === id
     );
     if (filter?.length > 0) setAdvertisingByCategory(filter);

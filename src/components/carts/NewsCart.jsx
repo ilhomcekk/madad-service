@@ -18,7 +18,7 @@ const NewsCart = ({ cart, attribute }) => {
         className="cart__image"
         src={API + cart?.photo}
         alt=""
-        style={{ width: "350px", height: "350px" }}
+        style={{ width: "100%", height: "350px" }}
       />
       <div className="cart__action">
         <div className="cart__title">
@@ -30,13 +30,13 @@ const NewsCart = ({ cart, attribute }) => {
             />
           }
         </div>
-        <div className="cart__description">
+        {/* <div className="cart__description">
           <TranslationApi
             uz={HTMLReactParser(String(cart?.description_uz))}
             ru={HTMLReactParser(String(cart?.description_ru))}
             en={HTMLReactParser(String(cart?.description_en))}
           />
-        </div>
+        </div> */}
         <div className="cart__date">{cart?.date?.split(",")[0]}</div>
       </div>
     </Link>

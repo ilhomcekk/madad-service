@@ -27,14 +27,14 @@ const Offer = () => {
     dispatch(getOffers(params));
   }, []);
 
-  const handleFilter = async () => {
-    let filter = await offers?.filter((item) => item?.category?._id === id);
+  const handleFilter = () => {
+    let filter = offers?.filter((item) => item?.category?._id === id);
     if (filter?.length > 0) setOffersByCategory(filter);
   };
 
   useEffect(() => {
     handleFilter();
-  }, [offersByCategory]);
+  }, [offers]);
 
   const settings = {
     dots: false,
@@ -86,7 +86,7 @@ const Offer = () => {
                 className="box__image"
                 src={API + item?.photo}
                 alt=""
-                style={{ width: "350px", height: "350px" }}
+                style={{ width: "100%", height: "350px" }}
               />
               <div className="box__action">
                 <div className="box__title">
@@ -96,12 +96,12 @@ const Offer = () => {
                     en={item?.name_en}
                   />
                 </div>
-                <div className="box__link">
+                {/* <div className="box__link">
                   Оставить заявку
                   <div className="box__svg">
                     <BsArrowRight />
                   </div>
-                </div>
+                </div> */}
               </div>
             </Link>
           ))}
