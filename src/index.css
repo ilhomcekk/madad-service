@@ -52,6 +52,10 @@ body {
   outline: none;
 }
 
+#webpack-dev-server-client-overlay{
+  display: none !important;
+}
+
 .title {
   font-size: 92px;
   position: relative;

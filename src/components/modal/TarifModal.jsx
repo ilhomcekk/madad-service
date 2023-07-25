@@ -12,6 +12,7 @@ import {
   postCreateTelegram,
   setTarifStep,
 } from "../../redux/actions/telegramActions";
+import { toast } from "react-toastify";
 
 const style = {
   position: "absolute",
@@ -63,12 +64,23 @@ const TarifModal = ({ data }) => {
   };
 
   const handleSubmit = () => {
-    dispatch(
-      postCreateTelegram(`
-        ФИО: ${params.name}
-        %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментария: ${params.comment}
-    `)
-    );
+    if (!params?.name) {
+      toast.error("Напишите имя");
+    }
+    if (!params?.phone) {
+      toast.error("Напишите телефон");
+    }
+    if (!params?.comment) {
+      toast.error("Напишите комментария");
+    }
+    if (params?.name && params?.phone && params?.comment) {
+      dispatch(
+        postCreateTelegram(`
+          ФИО: ${params.name}
+          %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментария: ${params.comment}
+      `)
+      );
+    }
   };
 
   return (

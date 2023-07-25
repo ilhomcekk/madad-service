@@ -99,7 +99,10 @@ const Navbar = () => {
     if (!params?.phone) {
       toast.error("Напишите телефон");
     }
-    if (params?.name && params?.phone) {
+    if (!params?.comment) {
+      toast.error("Напишите комментария");
+    }
+    if (params?.name && params?.phone && params?.comment) {
       dispatch(
         postCreateTelegram(`
           ФИО: ${params.name} %0AСкидка: Заявка со скидкой 10%
