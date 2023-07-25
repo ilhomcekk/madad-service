@@ -53,7 +53,7 @@ body {
 }
 
 #webpack-dev-server-client-overlay{
-  display: none !important;
+  /* display: none !important; */
 }
 
 .title {
