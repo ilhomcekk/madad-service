@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutUs } from "../../redux/actions/aboutUsActions";
+import TranslationApi from "../translation/TranslationApi";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const About = () => {
     <section className="about" id="about">
       <Container>
         <Title
-          title="О нас"
+          title={<TranslationApi ru="О нас" uz="Biz haqimizda" en="About us" />}
           attribute={{
             "data-aos": "fade-zoom-in",
             "data-aos-duration": 1200,
@@ -81,20 +82,31 @@ const About = () => {
           >
             <div className="card-item">
               <div className="item__title">
-                Мы оказываем широкий спектр услуг.
+                <TranslationApi
+                  ru={"Мы оказываем широкий спектр услуг."}
+                  uz={"Biz keng ko'lamli xizmatlarni taqdim etamiz."}
+                  en={"We provide a wide range of services."}
+                />
               </div>
               <div className="item__text">
-                Квартирные, офисные и дачные переезды– это наша ежедневная
-                работа и мы настоящие профессионалы своего дела. Перевозка,
-                организованная нашей компанией это полноценный переезд «под
-                ключ», а не просто несколько грузчиков и газель. Мы поможем вам
-                с упаковкой личных вещей, сборкой-разборкой мебели и
-                подключением бытовой техники. По приезду в новую квартиру или
-                офис, вся ваша мебель будет собрана и вместе с вещами
-                расставлена по своим местам.{" "}
+                <TranslationApi
+                  ru={
+                    "Квартирные, офисные и дачные переезды– это наша ежедневная работа и мы настоящие профессионалы своего дела. Перевозка, организованная нашей компанией это полноценный переезд «подключ», а не просто несколько грузчиков и газель. Мы поможем вам с упаковкой личных вещей, сборкой-разборкой мебели и подключением бытовой техники. По приезду в новую квартиру или офис, вся ваша мебель будет собрана и вместе с вещами расставлена по своим местам."
+                  }
+                  uz={
+                    "Kvartira, ofis va qishloqni ko'chirish bizning kundalik ishimiz va biz o'z sohamizning haqiqiy professionallarimiz. Kompaniyamiz tomonidan tashkil etilgan transport - bu faqat bir nechta yuk ko'taruvchi va gazel emas, balki to'liq kalitli ko'chirishdir. Biz sizga shaxsiy buyumlarni qadoqlash, mebellarni yig'ish va demontaj qilish va maishiy texnikani ulashda yordam beramiz. Yangi kvartira yoki ofisga kelganingizdan so'ng, sizning barcha mebellaringiz yig'iladi va o'z joylaridagi narsalar bilan birlashtiriladi."
+                  }
+                  en={
+                    "Apartment, office and country moving is our daily work and we are true professionals in our field. Transportation organized by our company is a full-fledged turnkey move, and not just a few loaders and a gazelle. We will help you with packing personal items, assembling and disassembling furniture and connecting household appliances. Upon arrival at a new apartment or office, all your furniture will be collected and put together with things in their places."
+                  }
+                />
               </div>
-              <Link className="show-more" to="/tariffs">
-                ПОДРОБНЕЕ
+              <Link className="show-more" to="/contacts">
+                <TranslationApi
+                  ru={"ПОДРОБНЕЕ"}
+                  uz={"BATAFSIL"}
+                  en={"LEARN MORE"}
+                />
                 <ImArrowRight2 />
               </Link>
             </div>

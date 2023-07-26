@@ -63,6 +63,16 @@ const TarifModal = ({ data }) => {
     });
   };
 
+  const handleChangePhone = (e) => {
+    const { name, value } = e.target;
+    setParams((prev) => {
+      return {
+        ...prev,
+        [name]: value?.replace(/\D/g, ""),
+      };
+    });
+  };
+
   const handleSubmit = () => {
     if (!params?.name) {
       toast.error("Напишите имя");
@@ -112,7 +122,10 @@ const TarifModal = ({ data }) => {
               className="w-full"
               name="phone"
               id="phone"
-              onChange={handleChangeParams}
+              type="text"
+              value={params?.phone}
+              onChange={handleChangePhone}
+              inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
             />
             <label htmlFor="comment" className="block mt-4">
               Комментария

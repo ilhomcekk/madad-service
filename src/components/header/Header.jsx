@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TranslationApi from "../translation/TranslationApi";
 import TarifModal from "../modal/TarifModal";
 import { setTarifStep } from "../../redux/actions/telegramActions";
+import { BsTelephone } from "react-icons/bs";
 const API = "https://api.madad-service.uz/";
 
 const Header = () => {
@@ -59,10 +60,19 @@ const Header = () => {
             className="header-desc text-center"
             style={{ marginTop: "-1rem", marginBottom: "2rem" }}
           >
-            Предоставляем услуги для физических лиц и государственных
-            организаций
+            <TranslationApi
+              ru={
+                "Предоставляем услуги для физических лиц и государственных организаций"
+              }
+              uz={
+                "Biz jismoniy shaxslar va davlat tashkilotlari uchun xizmatlarni taqdim etamiz"
+              }
+              en={
+                "We provide services for individuals and government organizations"
+              }
+            />
           </div>
-          <div
+          {/* <div
             className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-4"
             data-aos="fade-zoom-in"
             data-aos-delay="2500"
@@ -85,7 +95,7 @@ const Header = () => {
                 />
               </Link>
             ))}
-          </div>
+          </div> */}
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
@@ -94,13 +104,29 @@ const Header = () => {
             onClick={handleClick}
           >
             <div className="show-more mt-16">
-              Оставить заявку
+              <TranslationApi
+                ru="Оставить заявку"
+                uz="Ariza yuboring"
+                en="Submit application"
+              />
               <ImArrowRight2 />
             </div>
             {/* <IconButton className="header-arrow">
             <IoIosArrowRoundDown />
           </IconButton> */}
           </div>
+          <a
+            href="tel:+998930020333"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="1200"
+            className="cursor-pointer"
+          >
+            <div className="show-more mt-4">
+              +998 93 002 03 33
+              <BsTelephone />
+            </div>
+          </a>
         </Container>
       </section>
       <TarifModal

@@ -10,6 +10,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import ru from "../../assets/images/ru.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { getPartners } from "../../redux/actions/partnersActions";
+import TranslationApi from "../translation/TranslationApi";
 const API = "https://api.madad-service.uz/";
 
 const Partners = () => {
@@ -65,7 +66,7 @@ const Partners = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 1200,
           }}
-          title={"ПАРТНЕРЫ"}
+          title={<TranslationApi ru="ПАРТНЕРЫ" uz="HAMKORLAR" en="PARTNERS" />}
           style="#fff"
         />
         <Slider className="partners-slick my-12" {...settings}>
@@ -82,10 +83,7 @@ const Partners = () => {
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqQe8JhxoXjy2_lve779pbB0AlaR-rm4bHA&usqp=CAU"
                 alt=""
               /> */}
-              <LazyLoadImage
-                src={API + item?.photo}
-                alt=""
-              />
+              <LazyLoadImage src={API + item?.photo} alt="" />
             </Link>
           ))}
         </Slider>

@@ -32,14 +32,16 @@
       display: flex;
       align-items: center;
       column-gap: 1rem;
-      font-size: 20px;
-      color: #fff;
+      font-size: 26px;
+      color: #1babe3;
+      width: 50%;
       @media (max-width: 767px) {
         font-size: 16px;
         font-family: "Futura PT Book" !important;
         font-weight: normal !important;
         line-height: 1;
         column-gap: 10px;
+        width: 100%;
       }
       img {
         width: 45px;

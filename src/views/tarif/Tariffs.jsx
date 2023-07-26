@@ -33,14 +33,25 @@ const Tariffs = () => {
   const tariffsServices = useSelector(
     (state) => state.tariffsServices.tariffsServicesByCategory
   );
+  console.log(service);
 
   useEffect(() => {
     dispatch(getDetailServices(id));
   }, [id]);
   useEffect(() => {
     if (service?.category?._id) {
-      dispatch(getTariffsByCategory(service?.category?._id));
-      dispatch(getTariffsServicesByCategory(service?.category?._id));
+      dispatch(
+        getTariffsByCategory(service?.category?._id, {
+          page: 1,
+          limit: 24,
+        })
+      );
+      dispatch(
+        getTariffsServicesByCategory(service?.category?._id, {
+          page: 1,
+          limit: 24,
+        })
+      );
     }
   }, [service]);
 
@@ -82,7 +93,10 @@ const Tariffs = () => {
   return (
     <>
       <div className="content">
-        <div className="tarif-header">
+        <div
+          className="tarif-header"
+          style={{ background: `url(${API + service?.photo})` }}
+        >
           <Container className="relative">
             <div className="header-text">
               <TranslationApi
@@ -112,7 +126,9 @@ const Tariffs = () => {
           <div className="about-container">
             <LazyLoadImage
               className="about-left-image"
-              src={aboutLeftImage}
+              // src={aboutLeftImage}
+              src={API + service?.photo}
+              style={{ borderRadius: "15px" }}
               alt=""
             />
             <Container style={{ zIndex: "1", position: "relative" }}>

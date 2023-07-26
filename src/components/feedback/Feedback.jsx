@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { postFeedbackCreate } from "../../redux/actions/feedbackActions";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
+import TranslationApi from "../translation/TranslationApi";
 
 const Feedback = () => {
   const dispatch = useDispatch();
@@ -78,7 +79,13 @@ const Feedback = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 600,
           }}
-          title="ОБРАТНАЯ СВЯЗЬ"
+          title={
+            <TranslationApi
+              ru="ОБРАТНАЯ СВЯЗЬ"
+              uz="QAYTA ALOQA"
+              en="FEEDBACK"
+            />
+          }
           style="#fff"
         />
         <div className="feedback-box md:flex justify-between mt-8">
@@ -92,7 +99,7 @@ const Feedback = () => {
           <div className="md:w-3/5 h-max grid grid-cols-2 gap-x-6 gap-y-10 mt-8">
             <TextField
               id="filled-textarea"
-              label="Имя"
+              label={<TranslationApi ru="Имя" uz="Ism" en="Name" />}
               placeholder="Рафаэль"
               multiline
               variant="filled"
@@ -129,7 +136,9 @@ const Feedback = () => {
               country={"uz"}
               onlyCountries={["uz"]}
               countryCodeEditable={false}
-              specialLabel="Телефон"
+              specialLabel={
+                <TranslationApi ru="Телефон" uz="Telefon" en="Phone" />
+              }
               value={params.phone}
               onChange={(e) =>
                 setParams((prev) => {
@@ -142,7 +151,9 @@ const Feedback = () => {
             />
             <TextField
               id="filled-textarea"
-              label="Описание"
+              label={
+                <TranslationApi ru="Описание" uz="Tavsif" en="Description" />
+              }
               multiline
               variant="filled"
               focused

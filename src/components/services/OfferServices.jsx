@@ -40,7 +40,7 @@ const OfferServices = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 1200,
           }}
-          title="УСЛУГИ"
+          title={<TranslationApi ru="УСЛУГИ" uz="XIZMATLAR" en="SERVICES" />}
         />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-4">
           {servicesByCategory?.map((cart, idx) => (

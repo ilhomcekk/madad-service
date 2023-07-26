@@ -1,9 +1,10 @@
 .tarif-header {
   height: 570px;
   width: 100%;
-  background: url("../images/tarif.png") no-repeat;
-  background-size: cover;
-  background-position: center;
+  // background: url("../images/tarif.png") no-repeat;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
   position: relative;
   display: flex;
   align-items: center;
@@ -16,17 +17,17 @@
   //   width: 100%;
   //   background: rgba(27, 171, 227, 0.72);
   // }
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     height: 250px;
   }
   .header-text {
     font-size: 90px;
     color: #fff;
     line-height: 1;
-    @media (min-width: 767px) and (max-width: 1000px){
+    @media (min-width: 767px) and (max-width: 1000px) {
       font-size: 72px;
     }
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 34px;
     }
   }
@@ -63,10 +64,10 @@
     color: #1babe3;
     transition: all 0.4s;
     cursor: pointer;
-    @media (min-width: 767px) and (max-width: 1000px){
+    @media (min-width: 767px) and (max-width: 1000px) {
       left: 43%;
     }
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       left: 36%;
     }
     svg {
@@ -87,10 +88,10 @@
     color: #1babe3;
     transition: all 0.4s;
     cursor: pointer;
-    @media (min-width: 767px) and (max-width: 1000px){
+    @media (min-width: 767px) and (max-width: 1000px) {
       left: 57%;
     }
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       left: 64%;
     }
     svg {

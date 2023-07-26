@@ -39,7 +39,13 @@ const Direction = () => {
             data-aos="fade-right"
             data-aos-duration="1200"
           >
-            <div className="left__title">НАШИ НАПРАВЛЕНИЯ</div>
+            <div className="left__title">
+              <TranslationApi
+                ru="НАШИ НАПРАВЛЕНИЯ"
+                uz="BIZNING YO'LLARIMIZ"
+                en="OUR DIRECTIONS"
+              />
+            </div>
             <div className="left__boxes">
               {list && (
                 <>

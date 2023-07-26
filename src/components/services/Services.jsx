@@ -43,7 +43,7 @@ const Services = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 1200,
           }}
-          title="УСЛУГИ"
+          title={<TranslationApi ru="УСЛУГИ" uz="XIZMATLAR" en="SERVICES" />}
         />
         <div className="flex overflow-x-auto relative gap-x-2 my-8">
           <Button

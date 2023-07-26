@@ -12,6 +12,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import newsAbsoluteImage from "../../assets/images/news-absolute.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getNews } from "../../redux/actions/newsActions";
+import TranslationApi from "../translation/TranslationApi";
 
 const News = () => {
   const dispatch = useDispatch();
@@ -75,7 +76,7 @@ const News = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 1200,
           }}
-          title={"НОВОСТИ"}
+          title={<TranslationApi ru="НОВОСТИ" uz="YANGILIKLAR" en="NEWS" />}
         />
         <Slider className="news-slick md:my-12 mt-12 mb-32" {...settings}>
           {news?.map((item, idx) => (
@@ -91,7 +92,7 @@ const News = () => {
           ))}
         </Slider>
         <Link className="show-more mx-auto" to="/news">
-          ПОДРОБНЕЕ
+          <TranslationApi ru="ПОДРОБНЕЕ" uz="BATAFSIL" en="SHOW MORE" />
           <ImArrowRight2 />
         </Link>
       </Container>

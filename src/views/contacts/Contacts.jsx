@@ -163,7 +163,8 @@ const Contacts = () => {
                     <div>
                       <div className="block-title">Локация</div>
                       <div className="block-text color-gray font-400">
-                        Местонахожение
+                        ТРЦ Vega Centre ул. Шота Руставели 150 напротив Южного
+                        вокзала, Ташкент 100121
                       </div>
                     </div>
                   </div>
