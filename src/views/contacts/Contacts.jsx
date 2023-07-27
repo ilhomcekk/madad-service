@@ -27,8 +27,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523,
+  lat: 41.2598788,
+  lng: 69.2238091,
 };
 
 const Contacts = () => {
@@ -123,7 +123,7 @@ const Contacts = () => {
                   mapContainerClassName="map"
                   mapContainerStyle={containerStyle}
                   center={center}
-                  zoom={10}
+                  zoom={13}
                   onLoad={onLoad}
                   onUnmount={onUnmount}
                 >

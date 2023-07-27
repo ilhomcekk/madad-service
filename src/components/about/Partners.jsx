@@ -71,9 +71,9 @@ const Partners = () => {
         />
         <Slider className="partners-slick my-12" {...settings}>
           {partners?.map((item, idx) => (
-            <Link
+            <a
               key={idx}
-              to=""
+              href={item?.link}
               className="partners-box"
               data-aos="fade-zoom-in"
               data-aos-duration="1200"
@@ -84,7 +84,7 @@ const Partners = () => {
                 alt=""
               /> */}
               <LazyLoadImage src={API + item?.photo} alt="" />
-            </Link>
+            </a>
           ))}
         </Slider>
       </Container>
