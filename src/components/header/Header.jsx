@@ -103,7 +103,7 @@ const Header = () => {
             className="cursor-pointer"
             onClick={handleClick}
           >
-            <div className="show-more mt-16 md:text-auto !text-sm">
+            <div className="show-more mt-16">
               <TranslationApi
                 ru="Оставить заявку"
                 uz="Ariza yuboring"
@@ -122,7 +122,7 @@ const Header = () => {
             data-aos-delay="1200"
             className="cursor-pointer"
           >
-            <div className="show-more mt-4 md:text-auto !text-sm">
+            <div className="show-more mt-4">
               +998 93 002 03 33
               <BsTelephone />
             </div>
