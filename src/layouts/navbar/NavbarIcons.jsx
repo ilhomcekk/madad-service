@@ -13,6 +13,7 @@ import { Box, TextField } from "@mui/material";
 import { ImArrowRight2 } from "react-icons/im";
 import { toast } from "react-toastify";
 import { AiOutlinePercentage } from "react-icons/ai";
+import TranslationApi from "../../components/translation/TranslationApi";
 
 const style = {
   position: "absolute",
@@ -99,7 +100,11 @@ const NavbarIcons = () => {
           className="navbar-discount flex items-center text-white cursor-pointer"
           onClick={handleClick}
         >
-          Получить скидку
+          <TranslationApi
+            ru="Получить скидку"
+            uz="Chegirma"
+            en="Get a discount"
+          />
           <AiOutlinePercentage
             size={24}
             color="#fff"

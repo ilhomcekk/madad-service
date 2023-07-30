@@ -20,6 +20,7 @@ import { Button, TextField } from "@mui/material";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { postFeedbackCreate } from "../../redux/actions/feedbackActions";
+import TranslationApi from "../../components/translation/TranslationApi";
 
 const containerStyle = {
   width: "100%",
@@ -115,7 +116,9 @@ const Contacts = () => {
           alt=""
         />
         <Container>
-          <Title title="КОНТАКТЫ" />
+          <Title
+            title={<TranslationApi ru="КОНТАКТЫ" uz="KONTATK" en="CONTACTS" />}
+          />
           <div className="contacts-box flex lg:flex-row flex-col pt-10 pb-24">
             <div className="box-first">
               {isLoaded ? (
@@ -139,7 +142,9 @@ const Contacts = () => {
               )}
               <div className="contact-boxes grid md:grid-cols-2 gap-4 mt-4">
                 <div className="contact-box">
-                  <div className="text-2xl color-blue mb-4">Контакты</div>
+                  <div className="text-2xl color-blue mb-4">
+                    <TranslationApi ru="Контакты" uz="Kontakt" en="Contacts" />
+                  </div>
                   <div className="contact-block">
                     <BsTelephone />
                     <div>
@@ -170,7 +175,13 @@ const Contacts = () => {
                   </div>
                 </div>
                 <div className="contact-box">
-                  <div className="text-2xl color-blue mb-4">Соц.сети</div>
+                  <div className="text-2xl color-blue mb-4">
+                    <TranslationApi
+                      ru="Соц.сети"
+                      uz="Tarmoqlar"
+                      en="Soc.networks"
+                    />
+                  </div>
                   <div className="contacts-icon flex items-center gap-4">
                     <a href="https://www.facebook.com/Madad-Service-111374008089763/?ref=pages_you_manage">
                       <FaFacebook color="#1babe3" size={28} />
@@ -191,11 +202,15 @@ const Contacts = () => {
             <div className="box-last">
               <div className="send-card">
                 <div className="send-title text-white text-2xl text-center mb-8">
-                  Отправьте нам сообщение
+                  <TranslationApi
+                    ru="Отправьте нам сообщение"
+                    uz="Bizga xabar yuboring"
+                    en="Send us a message"
+                  />
                 </div>
                 <TextField
                   id="filled-textarea"
-                  label="Имя"
+                  label={<TranslationApi ru="Имя" uz="Ism" en="Name" />}
                   multiline
                   variant="filled"
                   focused
@@ -207,7 +222,9 @@ const Contacts = () => {
                 />
                 <TextField
                   id="filled-textarea"
-                  label="Телефон"
+                  label={
+                    <TranslationApi ru="Телефон" uz="Telefon" en="Phone" />
+                  }
                   multiline
                   variant="filled"
                   focused
@@ -219,7 +236,13 @@ const Contacts = () => {
                 />
                 <TextField
                   id="filled-textarea"
-                  label="Описание"
+                  label={
+                    <TranslationApi
+                      ru="Описание"
+                      uz="Tavsif"
+                      en="Description"
+                    />
+                  }
                   multiline
                   variant="filled"
                   focused
@@ -230,7 +253,7 @@ const Contacts = () => {
                   onChange={handleChangeParams}
                 />
                 <div className="contact-send" onClick={handleSubmit}>
-                  Отправить
+                  <TranslationApi ru="Отправить" uz="Jo'natish" en="Send" />
                   <div className="svg">
                     <BsArrowRight />
                   </div>

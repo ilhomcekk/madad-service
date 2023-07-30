@@ -24,6 +24,7 @@ import { toast } from "react-toastify";
 import { postCreateTelegram } from "../../redux/actions/telegramActions";
 import { useDispatch } from "react-redux";
 import { ImArrowRight2 } from "react-icons/im";
+import TranslationApi from "../../components/translation/TranslationApi";
 
 const style = {
   position: "absolute",
@@ -154,15 +155,15 @@ const Navbar = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  Услуги
+                  <TranslationApi ru="Услуги" uz="Xizmatlar" en="Services" />
                 </Link>
                 <Link
-                  to="news"
+                  to="/news"
                   data-aos="fade-down"
                   data-aos-duration="1200"
                   data-aos-delay="600"
                 >
-                  Новости
+                  <TranslationApi ru="Новости" uz="Yangiliklar" en="News" />
                 </Link>
                 <Link
                   to="/contacts"
@@ -170,10 +171,10 @@ const Navbar = () => {
                   data-aos-duration="1200"
                   data-aos-delay="900"
                 >
-                  Контакты
+                  <TranslationApi ru="Контакты" uz="Kontakt" en="Contacts" />
                 </Link>
                 <Link
-                  to="faq"
+                  to="/faq"
                   data-aos="fade-down"
                   data-aos-duration="1200"
                   data-aos-delay="1200"
@@ -215,10 +216,16 @@ const Navbar = () => {
             variant="standard"
           />
           <div className="bars-list">
-            <Link to="/offer">Услуги</Link>
-            <Link to="news">Новости</Link>
-            <Link to="/contacts">Контакты</Link>
-            <Link to="faq">FAQ</Link>
+            <Link to="/offer">
+              <TranslationApi ru="Услуги" uz="Xizmatlar" en="Services" />
+            </Link>
+            <Link to="/news">
+              <TranslationApi ru="Новости" uz="Yangiliklar" en="Новости" />
+            </Link>
+            <Link to="/contacts">
+              <TranslationApi ru="Контакты" uz="Kontakt" en="Contacts" />
+            </Link>
+            <Link to="/faq">FAQ</Link>
             <div
               onClick={handleClick}
               className="flex items-center text-white cursor-pointer text-lg gap-x-2 whitespace-nowrap"

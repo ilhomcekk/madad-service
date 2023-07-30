@@ -11,6 +11,7 @@ import Feedback from "../../components/feedback/Feedback";
 import { useDispatch, useSelector } from "react-redux";
 import { getNews } from "../../redux/actions/newsActions";
 import { useLocation, useNavigate } from "react-router-dom";
+import TranslationApi from "../../components/translation/TranslationApi";
 
 const News = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,9 @@ const News = () => {
           alt=""
         />
         <Container>
-          <Title title="НОВОСТИ" />
+          <Title
+            title={<TranslationApi ru="НОВОСТИ" uz="YANGILIKLAR" en="NEWS" />}
+          />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 my-12">
             {news?.map((item, idx) => (
               <NewsCart cart={item} key={idx} />

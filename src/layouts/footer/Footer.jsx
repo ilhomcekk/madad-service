@@ -8,6 +8,7 @@ import footerLogo from "../../assets/images/no-home-logo.svg";
 import { FaFacebook, FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import "../../assets/scss/_footer.scss";
+import TranslationApi from "../../components/translation/TranslationApi";
 
 const Footer = () => {
   return (
@@ -26,13 +27,13 @@ const Footer = () => {
           </div>
           <div className="footer-box">
             <Link to={"/offer"} className="footer-link">
-              Услуги
+              <TranslationApi ru="Услуги" uz="Xizmatlar" en="Services" />
             </Link>
             <Link to={"/news"} className="footer-link">
-              Новости
+              <TranslationApi ru="Новости" uz="Yangiliklar" en="News" />
             </Link>
             <Link to={"/contacts"} className="footer-link">
-              Контакты
+              <TranslationApi ru="Контакты" uz="Kontakt" en="Contacts" />
             </Link>
           </div>
           <div className="footer-box">
@@ -40,18 +41,26 @@ const Footer = () => {
               FAQ
             </Link>
             <Link to="/agreement" className="footer-link">
-              Пользовательское соглашение
+              <TranslationApi
+                ru="Пользовательское соглашение"
+                uz="Foydalanish shartlari"
+                en="Terms of use"
+              />
             </Link>
           </div>
           <div className="footer-box">
-            <div className="footer-title">Контакты</div>
+            <div className="footer-title">
+              <TranslationApi ru="Контакты" uz="Kontakt" en="Contacts" />
+            </div>
             <a href="tel:+998930020333" className="footer-phone">
               <BsTelephone />
               +998930020333
             </a>
           </div>
           <div className="footer-box">
-            <div className="footer-title">Соц.сети</div>
+            <div className="footer-title">
+              <TranslationApi ru="Соц.сети" uz="Tarmoqlar" en="Soc.networks" />
+            </div>
             <div className="footer-icons">
               <a href="https://www.facebook.com/Madad-Service-111374008089763/?ref=pages_you_manage">
                 <FaFacebook />

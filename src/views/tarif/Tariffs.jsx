@@ -116,7 +116,11 @@ const Tariffs = () => {
         </div>
         <section className="about">
           <Container>
-            <Title title="О нас" />
+            <Title
+              title={
+                <TranslationApi ru="О нас" uz="Biz haqimizda" en="About us" />
+              }
+            />
           </Container>
           <LazyLoadImage
             className="about-absolute-image"
@@ -160,8 +164,13 @@ const Tariffs = () => {
             alt=""
           />
           <Container>
-            <Title title="ТАРИФНЫЕ" />
-            <Title className="text-center" title="ПЛАНЫ" />
+            <Title
+              title={<TranslationApi ru="ТАРИФНЫЕ" uz="TARIFF" en="TARIFF" />}
+            />
+            <Title
+              className="text-center"
+              title={<TranslationApi ru="ПЛАНЫ" uz="PLANLAR" en="PLANS" />}
+            />
             <Slider className="tariffs-slick pt-12 pb-32" {...settings}>
               {tariffs?.map((item, idx) => (
                 <TarifCart
@@ -177,7 +186,16 @@ const Tariffs = () => {
           </Container>
         </section>
         <Container className="relative">
-          <Title className="text-center mt-12" title="ЧТО ВКЛЮЧЕНО?" />
+          <Title
+            className="text-center mt-12"
+            title={
+              <TranslationApi
+                ru="ЧТО ВКЛЮЧЕНО?"
+                uz="NIMALAR BOG'LANGAN?"
+                en="WHAT'S INCLUDED?"
+              />
+            }
+          />
           <div className="grid md:grid-cols-2 gap-6 mt-12 mb-24">
             {tariffsServices?.map((item, idx) => (
               <div
