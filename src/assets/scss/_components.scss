@@ -11,6 +11,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    filter: brightness(0.7);
   }
   .header-container {
     display: flex;
@@ -80,9 +81,9 @@
       }
     }
   }
-  .show-more{
+  .show-more {
     font-size: 20px;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 14px !important;
     }
   }

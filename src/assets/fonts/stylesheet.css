@@ -198,7 +198,7 @@
     url("FuturaPTCond-Bold.eot?#iefix") format("embedded-opentype"),
     url("FuturaPTCond-Bold.woff2") format("woff2"),
     url("FuturaPTCond-Bold.woff") format("woff"),
-    url("FuturaPTCond-Bold.ttf") format("truetype");
+      url("FuturaPTCond-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }

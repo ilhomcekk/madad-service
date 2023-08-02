@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../assets/scss/_components.scss";
-import bgImage from "../../assets/images/header.png";
+// import bgImage from "../../assets/images/header.png";
+import bgImage from "../../assets/images/newHeader.jpeg";
 import headerLogo from "../../assets/images/header-logo.png";
 import { Container } from "@mui/system";
 import headerDesc1 from "../../assets/images/header-desc-1.svg";
