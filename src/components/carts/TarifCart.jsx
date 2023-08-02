@@ -13,17 +13,31 @@ const TarifCart = ({ cart, handleClick }) => {
           en={cart?.name_en}
         />
       </div>
-      <div className="tarif-subtitle">Что входит:</div>
+      <div className="tarif-subtitle">
+        <TranslationApi
+          ru="Что входит:"
+          uz="Nima kiradi:"
+          en="What is included:"
+        />
+      </div>
       <ul className="tarif-list">
         {cart?.tariffs?.map((item, idx) => (
           <li key={idx}>{item} </li>
         ))}
       </ul>
       <div className="tarif-price">
-        {num === 0 ? "Договорная" : num?.toLocaleString("de-DE") + " сум"}
+        {num === 0 ? (
+          <TranslationApi ru="Договорная" uz="Kelishiladi" en="Negotiable" />
+        ) : (
+          num?.toLocaleString("de-DE") + " сум"
+        )}
       </div>
       <div className="tarif-link" onClick={handleClick}>
-        Оставить заявку
+        <TranslationApi
+          ru="Оставить заявку"
+          uz="Arizangizni yuboring"
+          en="Submit your application"
+        />
         <div className="svg">
           <BsArrowRight />
         </div>

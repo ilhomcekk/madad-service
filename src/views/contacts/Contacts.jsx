@@ -150,7 +150,11 @@ const Contacts = () => {
                     <div>
                       <div className="block-title">+998 93 002 03 33</div>
                       <div className="block-text color-gray font-400">
-                        Номер телефона
+                        <TranslationApi
+                          ru="Номер телефона"
+                          uz="Telefon raqami"
+                          en="Phone number"
+                        />
                       </div>
                     </div>
                   </div>
@@ -159,14 +163,20 @@ const Contacts = () => {
                     <div>
                       <div className="block-title">info@madad-service.uz</div>
                       <div className="block-text color-gray font-400">
-                        Почта
+                        <TranslationApi ru="Почта" uz="Pochta" en="Mail" />
                       </div>
                     </div>
                   </div>
                   <div className="contact-block">
                     <BiMap />
                     <div>
-                      <div className="block-title">Локация</div>
+                      <div className="block-title">
+                        <TranslationApi
+                          ru="Локация"
+                          uz="Manzil"
+                          en="Location"
+                        />
+                      </div>
                       <div className="block-text color-gray font-400">
                         ТРЦ Vega Centre ул. Шота Руставели 150 напротив Южного
                         вокзала, Ташкент 100121

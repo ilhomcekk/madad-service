@@ -13,6 +13,7 @@ import {
   setTarifStep,
 } from "../../redux/actions/telegramActions";
 import { toast } from "react-toastify";
+import TranslationApi from "../translation/TranslationApi";
 
 const style = {
   position: "absolute",
@@ -103,11 +104,15 @@ const TarifModal = ({ data }) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Ваше данные
+            <TranslationApi
+              ru="Ваше данные"
+              uz="Sizning tafsilotlaringiz"
+              en="Your details"
+            />
           </Typography>
           <div>
             <label htmlFor="name" className="block mt-4">
-              Имя
+              <TranslationApi ru="Имя" uz="Ism" en="Name" />
             </label>
             <TextField
               className="w-full"
@@ -116,7 +121,7 @@ const TarifModal = ({ data }) => {
               onChange={handleChangeParams}
             />
             <label htmlFor="phone" className="block mt-4">
-              Телефон
+              <TranslationApi ru="Телефон" uz="Telefon" en="Phone" />
             </label>
             <TextField
               className="w-full"
@@ -128,7 +133,7 @@ const TarifModal = ({ data }) => {
               inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
             />
             <label htmlFor="comment" className="block mt-4">
-              Комментария
+              <TranslationApi ru="Комментария" uz="Sharh" en="" />
             </label>
             <TextField
               className="w-full"
@@ -141,7 +146,11 @@ const TarifModal = ({ data }) => {
             onClick={handleSubmit}
             className="show-more mx-auto mt-8 !text-base"
           >
-            Подать заявку
+            <TranslationApi
+              ru="Подать заявку"
+              uz="Murojaat qilish"
+              en="Apply"
+            />
             <ImArrowRight2 />
           </button>
         </Box>

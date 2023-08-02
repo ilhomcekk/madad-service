@@ -22,6 +22,7 @@ const GoalCompany = () => {
               en="PRIMARY GOAL"
             />
           }
+          className="relative"
         />
         <Title
           attribute={{
@@ -29,7 +30,7 @@ const GoalCompany = () => {
             "data-aos-duration": 1200,
             "data-aos-delay": 1200,
           }}
-          className="md:text-end"
+          className="relative md:text-end"
           title={
             <TranslationApi ru="КОМПАНИИ" uz="KOMPANIYALAR" en="COMPANIES" />
           }
@@ -81,10 +82,22 @@ const GoalCompany = () => {
                 src="https://picsum.photos/85/85"
                 alt=""
               /> */}
-              <div className="card__title">Лучшие в деле.</div>
+              <div className="card__title">
+                <TranslationApi
+                  ru="Лучшие в деле."
+                  uz="Biznesda eng yaxshisi."
+                  en="The best in the business."
+                />
+              </div>
               <div className="card__text">
-                Мы поможем вам с упаковкой личных вещей, сборкой-разборкой
-                мебели и подключением бытовой техники
+                <TranslationApi
+                  ru="Мы поможем вам с упаковкой личных вещей, сборкой-разборкой
+                мебели и подключением бытовой техники"
+                  uz="Biz sizga shaxsiy buyumlarni qadoqlash, yig'ish va demontaj qilishda yordam beramiz
+                 mebel va maishiy texnika"
+                  en="We will help you with the packing of personal belongings, assembly and disassembly
+                 furniture and household appliances"
+                />
               </div>
             </div>
             <div
@@ -100,48 +113,16 @@ const GoalCompany = () => {
                 src="https://picsum.photos/85/85"
                 alt=""
               /> */}
-              <div className="card__title">Качество.</div>
-              <div className="card__text">
-                Наша компания гарантирует качество и несет ответственность за
-                выполненные работы.
+              <div className="card__title">
+                <TranslationApi ru="Качество." uz="Sifat." en="Quality." />
               </div>
-            </div>
-            <div
-              className="goal-card"
-              data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
-              data-aos-duration="1200"
-              data-aos-delay="1200"
-            >
-              <div className="card__image"></div>
-              {/* <LazyLoadImage
-                className="card__image"
-                src="https://picsum.photos/85/85"
-                alt=""
-              /> */}
-              <div className="card__title">Лучшие в деле.</div>
               <div className="card__text">
-                Мы поможем вам с упаковкой личных вещей, сборкой-разборкой
-                мебели и подключением бытовой техники
-              </div>
-            </div>
-            <div
-              className="goal-card"
-              data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
-              data-aos-duration="1200"
-              data-aos-delay="1500"
-            >
-              <div className="card__image"></div>
-              {/* <LazyLoadImage
-                className="card__image"
-                src="https://picsum.photos/85/85"
-                alt=""
-              /> */}
-              <div className="card__title">Лучшие в деле.</div>
-              <div className="card__text">
-                Мы поможем вам с упаковкой личных вещей, сборкой-разборкой
-                мебели и подключением бытовой техники
+                <TranslationApi
+                  ru="Наша компания гарантирует качество и несет ответственность за
+                выполненные работы."
+                  uz="Kompaniyamiz sifatni kafolatlaydi va bajarilgan ishlar uchun javobgardir."
+                  en="Our company guarantees quality and is responsible for the work performed."
+                />
               </div>
             </div>
           </div>

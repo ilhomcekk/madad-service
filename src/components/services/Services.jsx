@@ -58,7 +58,7 @@ const Services = () => {
               "data-aos-delay": 600,
             }}
           >
-            Все
+            <TranslationApi ru="Все" uz="Hammasi" en="All" />
           </Button>
           {categories?.map((category, idx) => (
             <Button

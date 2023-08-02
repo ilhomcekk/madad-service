@@ -155,7 +155,13 @@ const NewsDetail = () => {
                   en={HTMLReactParser(String(data?.description_en))}
                 />
               </div>
-              <div className="text-2xl mt-14 mb-6">Комментарии:</div>
+              <div className="text-2xl mt-14 mb-6">
+                <TranslationApi
+                  ru="Комментарии:"
+                  uz="Izohlar:"
+                  en="Comments:"
+                />
+              </div>
               {data?.comments?.map((item, idx) => (
                 <div key={idx} className="review">
                   <div className="flex md:flex-row flex-col items-center justify-between">
@@ -182,10 +188,18 @@ const NewsDetail = () => {
                   </div>
                 </div>
               ))}
-              <div className="text-2xl mt-14 mb-8">Оставить комментарий</div>
+              <div className="text-2xl mt-14 mb-8">
+                <TranslationApi
+                  ru="Оставить комментарий"
+                  uz="Izoh qoldiring"
+                  en="Leave a comment"
+                />
+              </div>
               <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                 <div className="review-input">
-                  <label>Имя</label>
+                  <label>
+                    <TranslationApi ru="Имя" uz="Ism" en="Name" />
+                  </label>
                   <input
                     name="name"
                     value={params.name}
@@ -194,7 +208,13 @@ const NewsDetail = () => {
                   />
                 </div>
                 <div className="review-input">
-                  <label>Номер телефона</label>
+                  <label>
+                    <TranslationApi
+                      ru="Номер телефона"
+                      uz="Telefon raqam"
+                      en="Phone number"
+                    />
+                  </label>
                   <input
                     name="phone"
                     value={params.phone}
@@ -203,7 +223,9 @@ const NewsDetail = () => {
                   />
                 </div>
                 <div className="review-input col-span-2">
-                  <label>Комментарий</label>
+                  <label>
+                    <TranslationApi ru="Комментарий" uz='Izoh' en='Comment' />
+                  </label>
                   <input
                     name="comment"
                     value={params.comment}
