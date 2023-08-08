@@ -45,19 +45,18 @@ const Header = () => {
           alt=""
           data-aos="zoom-out"
           data-aos-duration="600"
-          data-aos-delay="300"
         />
         <Container className="header-container">
           <LazyLoadImage
             data-aos="fade-zoom-in"
-            data-aos-delay="2500"
+            data-aos-delay="1700"
             className="header-logo"
             src={headerLogo}
             alt=""
           />
           <div
             data-aos="fade-zoom-in"
-            data-aos-delay="2200"
+            data-aos-delay="1600"
             className="header-desc text-center"
             style={{ marginTop: "-1rem", marginBottom: "2rem" }}
           >
@@ -99,8 +98,8 @@ const Header = () => {
           </div> */}
           <div
             data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="1200"
+            data-aos-duration="900"
+            data-aos-delay="600"
             className="cursor-pointer"
             onClick={handleClick}
           >
@@ -119,8 +118,8 @@ const Header = () => {
           <a
             href="tel:+998930020333"
             data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="1200"
+            data-aos-duration="900"
+            data-aos-delay="900"
             className="cursor-pointer"
           >
             <div className="show-more mt-4">

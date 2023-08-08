@@ -12,13 +12,31 @@ import Offer from "./views/offer/Offer";
 import Tariffs from "./views/tarif/Tariffs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NewsSearch from "./views/news/NewsSearch";
 import OfferDetail from "./views/offer/OfferDetail";
+import TarifModal from "./components/modal/TarifModal";
+import { setTarifStep } from "./redux/actions/telegramActions";
+import { useDispatch } from "react-redux";
 
 const App = () => {
+  const dispatch = useDispatch();
+  const [modalData, setModalData] = useState({
+    price: "Не выбрано",
+    category: {
+      name_ru: "Не выбрано",
+    },
+  });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      dispatch(setTarifStep());
+    }, 15000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   useEffect(() => {
     window.addEventListener(
       "load",
@@ -37,6 +55,7 @@ const App = () => {
       <Navbar />
       <ScrollToTop />
       <ToastContainer position="top-right" />
+      <TarifModal data={modalData} />
       <Routes path="/">
         <Route path="/" element={<Home />} />
         <Route path="/offer" element={<Offer />} />

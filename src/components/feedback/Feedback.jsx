@@ -10,6 +10,7 @@ import { postFeedbackCreate } from "../../redux/actions/feedbackActions";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import TranslationApi from "../translation/TranslationApi";
+import { postCreateTelegram } from "../../redux/actions/telegramActions";
 
 const Feedback = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,15 @@ const Feedback = () => {
     phone: "",
     description: "",
     date: dateNow,
+  });
+
+  const [telegramParams, setTelegramParams] = useState({
+    name: "",
+    phone: "",
+    tarif: "Не выбрано",
+    price: "Не выбрано",
+    category: "Не выбрано",
+    comment: "",
   });
 
   const handleDate = () => {
@@ -50,6 +60,12 @@ const Feedback = () => {
   const handleSubmit = () => {
     if (params.name && params.phone && params.description) {
       dispatch(postFeedbackCreate(params));
+      dispatch(
+        postCreateTelegram(`
+          ФИО: ${params.name}
+          %0AТелефон: ${params.phone} %0AУслуга: ${telegramParams.category} %0AТариф: ${telegramParams.tarif} %0AЦена: ${telegramParams.price} %0AКомментария: ${params.description}
+      `)
+      );
       setParams((prev) => {
         return {
           ...prev,
@@ -76,8 +92,8 @@ const Feedback = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 600,
+            "data-aos-duration": 900,
+            "data-aos-delay": 300,
           }}
           title={
             <TranslationApi
@@ -107,8 +123,7 @@ const Feedback = () => {
               size="large"
               className="feedback-input"
               data-aos="fade-right"
-              data-aos-duration="1200"
-              data-aos-delay="300"
+              data-aos-duration="900"
               name="name"
               value={params.name}
               onChange={handleChangeParams}
@@ -160,16 +175,16 @@ const Feedback = () => {
               size="large"
               className="feedback-input"
               data-aos="fade-right"
-              data-aos-duration="1200"
-              data-aos-delay="900"
+              data-aos-duration="900"
+              data-aos-delay="600"
               name="description"
               value={params.description}
               onChange={handleChangeParams}
             />
             <Button
               data-aos="fade-right"
-              data-aos-duration="1200"
-              data-aos-delay="1200"
+              data-aos-duration="900"
+              data-aos-delay="900"
               className="feedback-send"
               variant="outlined"
               onClick={handleSubmit}

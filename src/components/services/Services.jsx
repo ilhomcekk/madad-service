@@ -40,8 +40,8 @@ const Services = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-duration": 900,
+            "data-aos-delay": 900,
           }}
           title={<TranslationApi ru="УСЛУГИ" uz="XIZMATLAR" en="SERVICES" />}
         />
@@ -54,8 +54,8 @@ const Services = () => {
             className={`category-tab ${selectedTab === 0 && "active"}`}
             attribute={{
               "data-aos": "fade-zoom-in",
-              "data-aos-duration": 1200,
-              "data-aos-delay": 600,
+              "data-aos-duration": 900,
+              "data-aos-delay": 300,
             }}
           >
             <TranslationApi ru="Все" uz="Hammasi" en="All" />
@@ -72,8 +72,8 @@ const Services = () => {
               }`}
               attribute={{
                 "data-aos": "fade-zoom-in",
-                "data-aos-duration": 1200,
-                "data-aos-delay": 600,
+                "data-aos-duration": 900,
+                "data-aos-delay": 300,
               }}
             >
               <TranslationApi
@@ -90,8 +90,8 @@ const Services = () => {
                 <ServiceCart
                   attribute={{
                     "data-aos": "fade-zoom-in",
-                    "data-aos-duration": 1200,
-                    "data-aos-delay": 400,
+                    "data-aos-duration": 900,
+                    "data-aos-delay": 100,
                   }}
                   key={idx}
                   cart={cart}
@@ -101,8 +101,8 @@ const Services = () => {
                 <ServiceCart
                   attribute={{
                     "data-aos": "fade-zoom-in",
-                    "data-aos-duration": 1200,
-                    "data-aos-delay": 400,
+                    "data-aos-duration": 900,
+                    "data-aos-delay": 100,
                   }}
                   key={idx}
                   cart={cart}

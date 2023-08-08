@@ -3,8 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link, useLocation } from "react-router-dom";
 import "../../assets/scss/_navbar.scss";
-import noHomeLogo from "../../assets/images/no-home-logo.svg";
-import homeLogo from "../../assets/images/home-logo.svg";
+// import noHomeLogo from "../../assets/images/no-home-logo.svg";
+import noHomeLogo from "../../assets/images/no-home-logo.png";
+// import homeLogo from "../../assets/images/home-logo.svg";
+import homeLogo from "../../assets/images/home-logo.png";
 import NavbarSearch from "./NavbarSearch";
 import NavbarLanguage from "./NavbarLanguage";
 import {

@@ -63,8 +63,8 @@ const Partners = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-duration": 900,
+            "data-aos-delay": 900,
           }}
           title={<TranslationApi ru="ПАРТНЕРЫ" uz="HAMKORLAR" en="PARTNERS" />}
           style="#fff"
@@ -76,8 +76,8 @@ const Partners = () => {
               href={item?.link}
               className="partners-box"
               data-aos="fade-zoom-in"
-              data-aos-duration="1200"
-              data-aos-delay="600"
+              data-aos-duration="900"
+              data-aos-delay="300"
             >
               {/* <LazyLoadImage
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqQe8JhxoXjy2_lve779pbB0AlaR-rm4bHA&usqp=CAU"

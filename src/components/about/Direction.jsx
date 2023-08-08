@@ -37,7 +37,7 @@ const Direction = () => {
           <div
             className="direction-left"
             data-aos="fade-right"
-            data-aos-duration="1200"
+            data-aos-duration="900"
           >
             <div className="left__title">
               <TranslationApi

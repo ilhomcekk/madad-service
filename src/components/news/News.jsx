@@ -73,8 +73,8 @@ const News = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-duration": 900,
+            "data-aos-delay": 900,
           }}
           title={<TranslationApi ru="НОВОСТИ" uz="YANGILIKLAR" en="NEWS" />}
         />
@@ -85,8 +85,8 @@ const News = () => {
               cart={item}
               attribute={{
                 "data-aos": "fade-zoom-in",
-                "data-aos-duration": 1200,
-                "data-aos-delay": 600,
+                "data-aos-duration": 900,
+                "data-aos-delay": 300,
               }}
             />
           ))}

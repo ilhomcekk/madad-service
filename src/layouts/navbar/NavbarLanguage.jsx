@@ -1,8 +1,11 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import uzFlag from "../../assets/images/uz.svg";
-import ruFlag from "../../assets/images/ru.svg";
-import enFlag from "../../assets/images/en.svg";
+// import uzFlag from "../../assets/images/uz.svg";
+// import ruFlag from "../../assets/images/ru.svg";
+// import enFlag from "../../assets/images/en.svg";
+import uzFlag from "../../assets/images/uz.png";
+import ruFlag from "../../assets/images/ru.png";
+import enFlag from "../../assets/images/en.png";
 import { IoIosArrowDown } from "react-icons/io";
 
 const NavbarLanguage = () => {

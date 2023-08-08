@@ -56,7 +56,7 @@ const About = () => {
           attribute={{
             "data-aos": "fade-zoom-in",
             "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-delay": 900,
           }}
         />
       </Container>
@@ -71,13 +71,13 @@ const About = () => {
           src={aboutLeftImage}
           alt=""
           data-aos="fade-right"
-          data-aos-duration="1200"
+          data-aos-duration="900"
         />
         <Container style={{ zIndex: "1", position: "relative" }}>
           <div
             className="about-card"
             data-aos="fade-left"
-            data-aos-duration="1200"
+            data-aos-duration="900"
             data-aos-delay="300"
           >
             <div className="card-item">

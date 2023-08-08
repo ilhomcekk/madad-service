@@ -12,8 +12,8 @@ const GoalCompany = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-duration": 900,
+            "data-aos-delay": 900,
           }}
           title={
             <TranslationApi
@@ -27,8 +27,8 @@ const GoalCompany = () => {
         <Title
           attribute={{
             "data-aos": "fade-zoom-in",
-            "data-aos-duration": 1200,
-            "data-aos-delay": 1200,
+            "data-aos-duration": 900,
+            "data-aos-delay": 900,
           }}
           className="relative md:text-end"
           title={
@@ -73,8 +73,8 @@ const GoalCompany = () => {
               className="goal-card"
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
-              data-aos-duration="1200"
-              data-aos-delay="600"
+              data-aos-duration="900"
+              data-aos-delay="300"
             >
               <div className="card__image"></div>
               {/* <LazyLoadImage
@@ -104,8 +104,8 @@ const GoalCompany = () => {
               className="goal-card"
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
-              data-aos-duration="1200"
-              data-aos-delay="900"
+              data-aos-duration="900"
+              data-aos-delay="600"
             >
               <div className="card__image"></div>
               {/* <LazyLoadImage
