@@ -29,7 +29,6 @@ const News = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
     arrows: true,
     speed: 500,
     slidesToShow: 3,

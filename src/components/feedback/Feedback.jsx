@@ -63,7 +63,7 @@ const Feedback = () => {
       dispatch(
         postCreateTelegram(`
           ФИО: ${params.name}
-          %0AТелефон: ${params.phone} %0AУслуга: ${telegramParams.category} %0AТариф: ${telegramParams.tarif} %0AЦена: ${telegramParams.price} %0AКомментария: ${params.description}
+          %0AТелефон: ${params.phone} %0AУслуга: ${telegramParams.category} %0AТариф: ${telegramParams.tarif} %0AЦена: ${telegramParams.price} %0AКомментарий: ${params.description}
       `)
       );
       setParams((prev) => {

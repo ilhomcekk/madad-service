@@ -776,3 +776,17 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .css-1acyv19,
+  .css-1sh8lc {
+    width: 95% !important;
+    input {
+      border-radius: 12px !important;
+    }
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline,
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+      border: none !important;
+    }
+  }
+}

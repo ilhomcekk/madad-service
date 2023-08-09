@@ -68,13 +68,13 @@ const NavbarIcons = () => {
       toast.error("Напишите телефон");
     }
     if (!params?.comment) {
-      toast.error("Напишите комментария");
+      toast.error("Напишите комментарий");
     }
     if (params?.name && params?.phone && params?.comment) {
       dispatch(
         postCreateTelegram(`
           ФИО: ${params.name} %0AСкидка: Заявка со скидкой 10%
-          %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментария: ${params.comment}
+          %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментарий: ${params.comment}
       `)
       );
       setModal(false);
@@ -144,7 +144,7 @@ const NavbarIcons = () => {
                 onChange={handleChangeParams}
               />
               <label htmlFor="comment" className="block mt-4">
-                Комментария
+                Комментарий
               </label>
               <TextField
                 className="w-full"

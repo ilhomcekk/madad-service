@@ -52,7 +52,7 @@ body {
   outline: none;
 }
 
-#webpack-dev-server-client-overlay{
+#webpack-dev-server-client-overlay {
   display: none !important;
 }
 
@@ -103,7 +103,7 @@ input {
     font-size: 72px;
     line-height: 1;
   }
-  .agreement-container .title{
+  .agreement-container .title {
     font-size: 60px;
   }
 }
@@ -112,7 +112,7 @@ input {
     font-size: 36px;
     line-height: 1;
   }
-  .agreement-container .title{
+  .agreement-container .title {
     font-size: 30px;
   }
 }

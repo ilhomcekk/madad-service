@@ -27,6 +27,7 @@ import { postCreateTelegram } from "../../redux/actions/telegramActions";
 import { useDispatch } from "react-redux";
 import { ImArrowRight2 } from "react-icons/im";
 import TranslationApi from "../../components/translation/TranslationApi";
+import logo from "../../assets/images/no-home-logo.png";
 
 const style = {
   position: "absolute",
@@ -37,6 +38,7 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
+  borderRadius: 4,
 };
 
 const Navbar = () => {
@@ -112,13 +114,13 @@ const Navbar = () => {
       toast.error("Напишите телефон");
     }
     if (!params?.comment) {
-      toast.error("Напишите комментария");
+      toast.error("Напишите комментарий");
     }
     if (params?.name && params?.phone && params?.comment) {
       dispatch(
         postCreateTelegram(`
           ФИО: ${params.name} %0AСкидка: Заявка со скидкой 10%
-          %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментария: ${params.comment}
+          %0AТелефон: ${params.phone} %0AУслуга: ${params.category} %0AТариф: ${params.tarif} %0AЦена: ${params.price} сум %0AКомментарий: ${params.comment}
       `)
       );
       setModal(false);
@@ -255,47 +257,87 @@ const Navbar = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               Ваше данные
-            </Typography>
-            <div>
-              <label htmlFor="name" className="block mt-4">
+            </Typography> */}
+            <img
+              className="text-center mx-auto"
+              style={{ maxWidth: "220px" }}
+              src={logo}
+              alt=""
+            />
+            <div className="flex flex-col gap-6 mt-6">
+              {/* <label htmlFor="name" className="block mt-4">
                 Имя
-              </label>
+              </label> */}
               <TextField
                 className="w-full"
                 name="name"
                 id="name"
+                InputLabelProps={{
+                  className: "font-400",
+                }}
+                label={<TranslationApi ru="Имя" uz="Ism" en="Name" />}
+                inputProps={{
+                  className: "!bg-gray-200 font-400",
+                }}
                 onChange={handleChangeParams}
               />
-              <label htmlFor="phone" className="block mt-4">
+              {/* <label htmlFor="phone" className="block mt-4">
                 Телефон
-              </label>
+              </label> */}
               <TextField
                 className="w-full"
                 name="phone"
                 id="phone"
+                label={<TranslationApi ru="Телефон" uz="Telefon" en="Phone" />}
                 value={params?.phone}
+                InputLabelProps={{
+                  className: "font-400",
+                }}
                 onChange={handleChangePhone}
-                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+                inputProps={{
+                  inputMode: "numeric",
+                  pattern: "[0-9]*",
+                  className: "!bg-gray-200 font-400",
+                }}
               />
-              <label htmlFor="comment" className="block mt-4">
-                Комментария
-              </label>
+              {/* <label htmlFor="comment" className="block mt-4">
+                Комментарий
+              </label> */}
               <TextField
-                className="w-full"
+                className="w-full !bg-gray-200 !rounded-xl"
                 name="comment"
                 id="comment"
+                rows={3}
+                multiline
+                InputLabelProps={{
+                  className: "font-400",
+                }}
+                label={
+                  <TranslationApi
+                    ru="Комментарий"
+                    uz="Sharh"
+                    en="Description"
+                  />
+                }
                 onChange={handleChangeParams}
+                inputProps={{
+                  className: "font-400",
+                }}
               />
             </div>
             <button
               onClick={handleSubmit}
               className="show-more mx-auto mt-8 !text-base"
             >
-              Подать заявку
+              <TranslationApi ru="Отправить" uz="Jo'natish" en="Send" />
               <ImArrowRight2 />
             </button>
+            <div className="border-t text-sm font-300 text-gray text-center leading-none mt-4 pt-2">
+              Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
+              обработку персональных данных
+            </div>
           </Box>
         </Modal>
       </div>

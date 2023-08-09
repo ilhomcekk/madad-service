@@ -157,7 +157,7 @@ const NewsDetail = () => {
               </div>
               <div className="text-2xl mt-14 mb-6">
                 <TranslationApi
-                  ru="Комментарии:"
+                  ru="Комментарий:"
                   uz="Izohlar:"
                   en="Comments:"
                 />

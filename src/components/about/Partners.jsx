@@ -24,7 +24,6 @@ const Partners = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
     arrows: true,
     speed: 500,
     slidesToShow: 4,
@@ -72,8 +71,8 @@ const Partners = () => {
         <Slider className="partners-slick my-12" {...settings}>
           {partners?.map((item, idx) => (
             <a
-              key={idx}
               href={item?.link}
+              key={idx}
               className="partners-box"
               data-aos="fade-zoom-in"
               data-aos-duration="900"

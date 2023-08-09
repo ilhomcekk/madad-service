@@ -33,7 +33,6 @@ const Tariffs = () => {
   const tariffsServices = useSelector(
     (state) => state.tariffsServices.tariffsServicesByCategory
   );
-  console.log(service);
 
   useEffect(() => {
     dispatch(getDetailServices(id));
@@ -57,7 +56,6 @@ const Tariffs = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
     arrows: true,
     speed: 500,
     slidesToShow: 3,
