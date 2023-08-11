@@ -3,6 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import TranslationApi from "../translation/TranslationApi";
 
 const TarifCart = ({ cart, handleClick }) => {
+  const language = window.localStorage.getItem("madad-Content-Language");
   let num = +cart?.price;
   return (
     <div className="tarif-cart">
@@ -21,9 +22,12 @@ const TarifCart = ({ cart, handleClick }) => {
         />
       </div>
       <ul className="tarif-list">
-        {cart?.tariffs?.map((item, idx) => (
-          <li key={idx}>{item} </li>
-        ))}
+        {language === "ru" &&
+          cart?.tariffs?.map((item, idx) => <li key={idx}>{item} </li>)}
+        {language === "uz" &&
+          cart?.tariffs_uz?.map((item, idx) => <li key={idx}>{item} </li>)}
+        {language === "en" &&
+          cart?.tariffs_en?.map((item, idx) => <li key={idx}>{item} </li>)}
       </ul>
       <div className="tarif-price">
         {num === 0 ? (
