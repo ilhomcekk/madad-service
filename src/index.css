@@ -116,3 +116,7 @@ input {
     font-size: 30px;
   }
 }
+
+.slick-cloned{
+  display: none !important;
+}

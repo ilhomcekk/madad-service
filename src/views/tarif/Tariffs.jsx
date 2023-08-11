@@ -54,6 +54,14 @@ const Tariffs = () => {
     }
   }, [service]);
 
+  const [tariffsByServicesId, setTariffsByServicesId] = useState([]);
+  useEffect(() => {
+    const tariffsByServices = tariffs?.filter((item) => {
+      return item?.service_id == id;
+    });
+    setTariffsByServicesId(tariffsByServices);
+  }, [tariffs]);
+
   const settings = {
     dots: false,
     arrows: true,
@@ -170,7 +178,7 @@ const Tariffs = () => {
               title={<TranslationApi ru="ПЛАНЫ" uz="PLANLAR" en="PLANS" />}
             />
             <Slider className="tariffs-slick pt-12 pb-32" {...settings}>
-              {tariffs?.map((item, idx) => (
+              {tariffsByServicesId?.map((item, idx) => (
                 <TarifCart
                   cart={item}
                   key={idx}
