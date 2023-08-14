@@ -48,13 +48,13 @@ const Header = () => {
           data-aos-duration="2200"
         />
         <Container className="header-container">
-          <LazyLoadImage
+          {/* <LazyLoadImage
             data-aos="fade-zoom-in"
             data-aos-delay="1700"
             className="header-logo"
             src={headerLogo}
             alt=""
-          />
+          /> */}
           <div
             data-aos="fade-zoom-in"
             data-aos-delay="1600"
@@ -73,16 +73,35 @@ const Header = () => {
               }
             />
           </div>
-          {/* <div
-            className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-4"
+          <div
+            className="flex gap-y-4 md:gap-x-8 gap-x-3 md:mt-10 mt-[12rem]"
             data-aos="fade-zoom-in"
-            data-aos-delay="2500"
+            data-aos-delay="1600"
           >
+            <div className="show-more" onClick={handleClick}>
+              <TranslationApi
+                ru="Оставить заявку"
+                uz="Ariza yuboring"
+                en="Submit application"
+              />
+              <ImArrowRight2 />
+            </div>
+            <a href="tel:+998930020333" className="cursor-pointer inline-block">
+              <div className="show-more">
+                +998 93 002 03 33
+                <BsTelephone />
+              </div>
+            </a>
+          </div>
+          <div className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-4">
             {categories?.map((item, idx) => (
-              <Link
+              <div
                 key={idx}
                 to={"/offer/" + item?._id}
-                className="header-desc"
+                className="header-category"
+                data-aos="fade-right"
+                data-aos-duration={`1200`}
+                data-aos-delay={`${(idx + 1) * 700}`}
               >
                 <LazyLoadImage
                   src={API + item?.photo}
@@ -94,36 +113,8 @@ const Header = () => {
                   uz={item?.name_uz}
                   en={item?.name_en}
                 />
-              </Link>
-            ))}
-          </div> */}
-          <div className="cursor-pointer flex gap-4 mt-10">
-            <div
-              className="show-more"
-              onClick={handleClick}
-              data-aos="fade-right"
-              data-aos-duration="1200"
-              data-aos-delay="3000"
-            >
-              <TranslationApi
-                ru="Оставить заявку"
-                uz="Ariza yuboring"
-                en="Submit application"
-              />
-              <ImArrowRight2 />
-            </div>
-            <a
-              href="tel:+998930020333"
-              data-aos="fade-right"
-              data-aos-duration="1600"
-              data-aos-delay="2600"
-              className="cursor-pointer inline-block"
-            >
-              <div className="show-more">
-                +998 93 002 03 33
-                <BsTelephone />
               </div>
-            </a>
+            ))}
           </div>
         </Container>
       </section>

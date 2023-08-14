@@ -132,9 +132,7 @@ const Navbar = () => {
       <div className={`navbar-height ${pathname !== "/" && "active-height"}`}>
         <nav
           ref={myRef}
-          className={`navbar ${navbarFixed && "navbar-fixed"} ${
-            pathname === "/" ? "home" : "no-home"
-          }`}
+          className={`navbar ${navbarFixed && "navbar-fixed"} no-home`}
         >
           <Container>
             <div className="navbar-inner">
@@ -145,11 +143,12 @@ const Navbar = () => {
                 data-aos-duration="1200"
                 data-aos-delay="1500"
               >
-                {pathname !== "/" ? (
+                {/* {pathname !== "/" ? (
                   <LazyLoadImage alt="" src={`${noHomeLogo}`} />
                 ) : (
                   <LazyLoadImage alt="" src={`${homeLogo}`} />
-                )}
+                )} */}
+                <LazyLoadImage alt="" src={`${noHomeLogo}`} />
               </Link>
               {/* <NavbarSearch /> */}
               <div className="navbar-list">
