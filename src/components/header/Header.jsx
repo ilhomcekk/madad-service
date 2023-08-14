@@ -3,6 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../assets/scss/_components.scss";
 // import bgImage from "../../assets/images/header.png";
 import bgImage from "../../assets/images/newHeader.jpeg";
+import headerBgImage from "../../assets/images/headerBg.png";
 import headerLogo from "../../assets/images/header-logo.png";
 import { Container } from "@mui/system";
 import headerDesc1 from "../../assets/images/header-desc-1.svg";
@@ -41,10 +42,10 @@ const Header = () => {
         <LazyLoadImage
           loading="lazy"
           className="header-bg-image"
-          src={bgImage}
+          src={headerBgImage}
           alt=""
-          data-aos="zoom-out"
-          data-aos-duration="600"
+          data-aos="fade-up"
+          data-aos-duration="2200"
         />
         <Container className="header-container">
           <LazyLoadImage
@@ -96,14 +97,14 @@ const Header = () => {
               </Link>
             ))}
           </div> */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aos-delay="600"
-            className="cursor-pointer"
-            onClick={handleClick}
-          >
-            <div className="show-more mt-16">
+          <div className="cursor-pointer flex gap-4 mt-10">
+            <div
+              className="show-more"
+              onClick={handleClick}
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-delay="3000"
+            >
               <TranslationApi
                 ru="Оставить заявку"
                 uz="Ariza yuboring"
@@ -111,22 +112,19 @@ const Header = () => {
               />
               <ImArrowRight2 />
             </div>
-            {/* <IconButton className="header-arrow">
-            <IoIosArrowRoundDown />
-          </IconButton> */}
+            <a
+              href="tel:+998930020333"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+              data-aos-delay="2600"
+              className="cursor-pointer inline-block"
+            >
+              <div className="show-more">
+                +998 93 002 03 33
+                <BsTelephone />
+              </div>
+            </a>
           </div>
-          <a
-            href="tel:+998930020333"
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aos-delay="900"
-            className="cursor-pointer"
-          >
-            <div className="show-more mt-4">
-              +998 93 002 03 33
-              <BsTelephone />
-            </div>
-          </a>
         </Container>
       </section>
       <TarifModal
