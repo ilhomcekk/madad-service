@@ -4,6 +4,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Title from "../title/Title";
 import goalAbsoluteImage from "../../assets/images/goal-absolute.png";
 import TranslationApi from "../translation/TranslationApi";
+import goal1 from "../../assets/images/goal1.png";
+import goal2 from "../../assets/images/goal2.png";
 
 const GoalCompany = () => {
   return (
@@ -76,7 +78,9 @@ const GoalCompany = () => {
               data-aos-duration="900"
               data-aos-delay="300"
             >
-              <div className="card__image"></div>
+              <div className="card__image">
+                <LazyLoadImage src={goal2} alt="" />
+              </div>
               {/* <LazyLoadImage
                 className="card__image"
                 src="https://picsum.photos/85/85"
@@ -107,7 +111,9 @@ const GoalCompany = () => {
               data-aos-duration="900"
               data-aos-delay="600"
             >
-              <div className="card__image"></div>
+              <div className="card__image">
+                <LazyLoadImage src={goal1} alt="" />
+              </div>
               {/* <LazyLoadImage
                 className="card__image"
                 src="https://picsum.photos/85/85"

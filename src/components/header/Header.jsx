@@ -74,7 +74,7 @@ const Header = () => {
             />
           </div>
           <div
-            className="flex gap-y-4 md:gap-x-8 gap-x-3 md:mt-10 mt-[12rem]"
+            className="flex gap-y-4 md:gap-x-8 gap-x-3 md:mt-10 mt-[2rem]"
             data-aos="fade-zoom-in"
             data-aos-delay="1600"
           >

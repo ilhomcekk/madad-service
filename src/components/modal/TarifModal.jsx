@@ -185,8 +185,14 @@ const TarifModal = ({ data }) => {
             <ImArrowRight2 />
           </button>
           <div className="border-t text-sm font-300 text-gray text-center leading-none mt-4 pt-2">
-            Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
-            обработку персональных данных
+            <TranslationApi
+              ru="Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
+            обработку персональных данных"
+              uz="Jo'natish tugmasini bosish orqali siz roziligingizni tasdiqlaysiz
+             shaxsiy ma'lumotlarni qayta ishlash"
+              en="By clicking the 'Send' button, you confirm your consent to
+             processing of personal data"
+            />
           </div>
         </Box>
       </Modal>

@@ -14,6 +14,7 @@ import { ImArrowRight2 } from "react-icons/im";
 import { toast } from "react-toastify";
 import { AiOutlinePercentage } from "react-icons/ai";
 import TranslationApi from "../../components/translation/TranslationApi";
+import logo from "../../assets/images/no-home-logo.png";
 
 const style = {
   position: "absolute",
@@ -56,6 +57,16 @@ const NavbarIcons = () => {
       return {
         ...prev,
         [name]: value,
+      };
+    });
+  };
+
+  const handleChangePhone = (e) => {
+    const { name, value } = e.target;
+    setParams((prev) => {
+      return {
+        ...prev,
+        [name]: value?.replace(/\D/g, ""),
       };
     });
   };
@@ -121,45 +132,82 @@ const NavbarIcons = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              Ваше данные
-            </Typography>
-            <div>
-              <label htmlFor="name" className="block mt-4">
-                Имя
-              </label>
+            <img
+              className="text-center mx-auto"
+              style={{ maxWidth: "220px" }}
+              src={logo}
+              alt=""
+            />
+            <div className="flex flex-col gap-6  mt-6">
               <TextField
                 className="w-full"
                 name="name"
                 id="name"
+                InputLabelProps={{
+                  className: "font-400",
+                }}
+                label={<TranslationApi ru="Имя" uz="Ism" en="Name" />}
                 onChange={handleChangeParams}
+                inputProps={{
+                  className: "!bg-gray-200 font-400",
+                }}
               />
-              <label htmlFor="phone" className="block mt-4">
-                Телефон
-              </label>
               <TextField
                 className="w-full"
                 name="phone"
                 id="phone"
-                onChange={handleChangeParams}
+                InputLabelProps={{
+                  className: "font-400",
+                }}
+                type="text"
+                value={params?.phone}
+                label={<TranslationApi ru="Телефон" uz="Telefon" en="Phone" />}
+                onChange={handleChangePhone}
+                inputProps={{
+                  inputMode: "numeric",
+                  pattern: "[0-9]*",
+                  className: "!bg-gray-200 font-400",
+                }}
               />
-              <label htmlFor="comment" className="block mt-4">
-                Комментарий
-              </label>
               <TextField
-                className="w-full"
+                className="w-full !bg-gray-200 !rounded-xl"
                 name="comment"
                 id="comment"
+                rows={3}
+                multiline
+                InputLabelProps={{
+                  className: "font-400",
+                }}
+                label={
+                  <TranslationApi
+                    ru="Комментарий"
+                    uz="Sharh"
+                    en="Description"
+                  />
+                }
                 onChange={handleChangeParams}
+                inputProps={{
+                  className: "font-400",
+                }}
               />
             </div>
             <button
               onClick={handleSubmit}
               className="show-more mx-auto mt-8 !text-base"
             >
-              Подать заявку
+              <TranslationApi ru="Отправить" uz="Jo'natish" en="Send" />
               <ImArrowRight2 />
             </button>
+            <div className="border-t text-sm font-300 text-gray text-center leading-none mt-4 pt-2">
+              <TranslationApi
+                ru="Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
+            обработку персональных данных"
+                uz="Jo'natish tugmasini bosish orqali siz roziligingizni tasdiqlaysiz
+             shaxsiy ma'lumotlarni qayta ishlash"
+                en="By clicking the 'Send' button, you confirm your consent to
+             processing of personal data"
+              />
+            </div>
           </Box>
         </Modal>
       </div>

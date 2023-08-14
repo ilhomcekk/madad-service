@@ -256,19 +256,13 @@ const Navbar = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-              Ваше данные
-            </Typography> */}
             <img
               className="text-center mx-auto"
               style={{ maxWidth: "220px" }}
               src={logo}
               alt=""
             />
-            <div className="flex flex-col gap-6 mt-6">
-              {/* <label htmlFor="name" className="block mt-4">
-                Имя
-              </label> */}
+            <div className="flex flex-col gap-6  mt-6">
               <TextField
                 className="w-full"
                 name="name"
@@ -277,23 +271,21 @@ const Navbar = () => {
                   className: "font-400",
                 }}
                 label={<TranslationApi ru="Имя" uz="Ism" en="Name" />}
+                onChange={handleChangeParams}
                 inputProps={{
                   className: "!bg-gray-200 font-400",
                 }}
-                onChange={handleChangeParams}
               />
-              {/* <label htmlFor="phone" className="block mt-4">
-                Телефон
-              </label> */}
               <TextField
                 className="w-full"
                 name="phone"
                 id="phone"
-                label={<TranslationApi ru="Телефон" uz="Telefon" en="Phone" />}
-                value={params?.phone}
                 InputLabelProps={{
                   className: "font-400",
                 }}
+                type="text"
+                value={params?.phone}
+                label={<TranslationApi ru="Телефон" uz="Telefon" en="Phone" />}
                 onChange={handleChangePhone}
                 inputProps={{
                   inputMode: "numeric",
@@ -301,9 +293,6 @@ const Navbar = () => {
                   className: "!bg-gray-200 font-400",
                 }}
               />
-              {/* <label htmlFor="comment" className="block mt-4">
-                Комментарий
-              </label> */}
               <TextField
                 className="w-full !bg-gray-200 !rounded-xl"
                 name="comment"
@@ -334,8 +323,14 @@ const Navbar = () => {
               <ImArrowRight2 />
             </button>
             <div className="border-t text-sm font-300 text-gray text-center leading-none mt-4 pt-2">
-              Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
-              обработку персональных данных
+              <TranslationApi
+                ru="Нажимая кнопку «Отправить», вы подтверждаете свое согласие на
+            обработку персональных данных"
+                uz="Jo'natish tugmasini bosish orqali siz roziligingizni tasdiqlaysiz
+             shaxsiy ma'lumotlarni qayta ishlash"
+                en="By clicking the 'Send' button, you confirm your consent to
+             processing of personal data"
+              />
             </div>
           </Box>
         </Modal>
