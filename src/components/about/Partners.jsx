@@ -72,6 +72,7 @@ const Partners = () => {
           {partners?.map((item, idx) => (
             <a
               href={item?.link}
+              target="_blank"
               key={idx}
               className="partners-box"
               data-aos="fade-zoom-in"
