@@ -37,6 +37,15 @@
       filter: none;
     }
   }
+  .show-more{
+    @media (max-width: 640px){
+      width: 80% !important;
+      max-width: 100% !important;
+      font-size: 14px !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  }
   .header-container {
     display: flex;
     flex-direction: column;
@@ -59,6 +68,8 @@
         right: -0.8rem;
         width: 5.5rem;
         z-index: -1;
+        animation: beforAnimation 1s linear 1;
+        animation-delay: 2s;
       }
     }
     .header-logo {
@@ -968,5 +979,14 @@
   100% {
     opacity: 1;
     scale: 0.8;
+  }
+}
+
+@keyframes beforAnimation {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }

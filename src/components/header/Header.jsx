@@ -78,10 +78,7 @@ const Header = () => {
             data-aos="fade-zoom-in"
             data-aos-delay="1600"
           >
-            <div
-              className="show-more md:w-auto !w-[80%] !max-w-full justify-center md:text-auto !text-[14px] md:px-auto !px-[12px]"
-              onClick={handleClick}
-            >
+            <div className="show-more justify-center" onClick={handleClick}>
               <TranslationApi
                 ru="Оставить заявку"
                 uz="Ariza yuboring"
@@ -93,7 +90,7 @@ const Header = () => {
               href="tel:+998930020333"
               className="cursor-pointer md:w-auto w-full inline-block"
             >
-              <div className="show-more md:w-auto !w-[80%] !max-w-full justify-center md:text-auto !text-[14px] md:px-auto !px-[12px]">
+              <div className="show-more justify-center">
                 +998 93 002 03 33
                 <BsTelephone />
               </div>
