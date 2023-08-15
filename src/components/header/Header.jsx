@@ -74,11 +74,14 @@ const Header = () => {
             />
           </div>
           <div
-            className="flex gap-y-4 md:gap-x-8 gap-x-3 md:mt-10 mt-[2rem]"
+            className="flex md:flex-row flex-col md:justify-unset justify-between md:w-auto w-full gap-y-4 md:gap-x-8 gap-x-3 md:mt-6 mt-[1.5rem]"
             data-aos="fade-zoom-in"
             data-aos-delay="1600"
           >
-            <div className="show-more" onClick={handleClick}>
+            <div
+              className="show-more md:w-auto !w-[80%] !max-w-full justify-center md:text-auto !text-[14px] md:px-auto !px-[12px]"
+              onClick={handleClick}
+            >
               <TranslationApi
                 ru="Оставить заявку"
                 uz="Ariza yuboring"
@@ -86,14 +89,17 @@ const Header = () => {
               />
               <ImArrowRight2 />
             </div>
-            <a href="tel:+998930020333" className="cursor-pointer inline-block">
-              <div className="show-more">
+            <a
+              href="tel:+998930020333"
+              className="cursor-pointer md:w-auto w-full inline-block"
+            >
+              <div className="show-more md:w-auto !w-[80%] !max-w-full justify-center md:text-auto !text-[14px] md:px-auto !px-[12px]">
                 +998 93 002 03 33
                 <BsTelephone />
               </div>
             </a>
           </div>
-          <div className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-4">
+          <div className="header-inner grid md:grid-cols-2 md:gap-6 gap-x-2 gap-y-3">
             {categories?.map((item, idx) => (
               <div
                 key={idx}
@@ -101,7 +107,7 @@ const Header = () => {
                 className="header-category"
                 data-aos="fade-right"
                 data-aos-duration={`1200`}
-                data-aos-delay={`${(idx + 1) * 700}`}
+                data-aos-delay={`${(idx + 1) * 400}`}
               >
                 <LazyLoadImage
                   src={API + item?.photo}
