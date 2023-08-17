@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../assets/scss/_components.scss";
 // import bgImage from "../../assets/images/header.png";
@@ -19,6 +19,7 @@ import TranslationApi from "../translation/TranslationApi";
 import TarifModal from "../modal/TarifModal";
 import { setTarifStep } from "../../redux/actions/telegramActions";
 import { BsTelephone } from "react-icons/bs";
+import { getCategory } from "../../redux/actions/categoryActions";
 const API = "https://api.madad-service.uz/";
 
 const Header = () => {
@@ -35,6 +36,10 @@ const Header = () => {
   const handleClick = () => {
     dispatch(setTarifStep());
   };
+
+  useEffect(() => {
+    getCategory();
+  }, []);
 
   return (
     <>
@@ -74,11 +79,14 @@ const Header = () => {
             />
           </div>
           <div
-            className="flex md:flex-row flex-col md:justify-unset justify-between md:w-auto w-full gap-y-4 md:gap-x-8 gap-x-3 md:mt-6 mt-[1.5rem]"
+            className="flex md:w-auto w-full gap-y-4 md:gap-x-8 gap-x-3 md:!mt-6 mt-[2.5rem]"
             data-aos="fade-zoom-in"
             data-aos-delay="1600"
           >
-            <div className="show-more justify-center" onClick={handleClick}>
+            <div
+              className="show-more justify-center w-max whitespace-nowrap"
+              onClick={handleClick}
+            >
               <TranslationApi
                 ru="Оставить заявку"
                 uz="Ariza yuboring"
@@ -88,15 +96,15 @@ const Header = () => {
             </div>
             <a
               href="tel:+998930020333"
-              className="cursor-pointer md:w-auto w-full inline-block"
+              className="cursor-pointer md:w-auto inline-block !m-0"
             >
-              <div className="show-more justify-center">
+              <div className="show-more justify-center w-max">
                 +998 93 002 03 33
                 <BsTelephone />
               </div>
             </a>
           </div>
-          <div className="header-inner grid md:grid-cols-2 md:gap-6 gap-x-2 gap-y-3">
+          <div className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-3">
             {categories?.map((item, idx) => (
               <div
                 key={idx}

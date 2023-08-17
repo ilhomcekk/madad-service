@@ -86,7 +86,7 @@ const Services = () => {
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
           {selectedTab === 0
-            ? services?.map((cart, idx) => (
+            ? services?.slice(0, 6)?.map((cart, idx) => (
                 <ServiceCart
                   attribute={{
                     "data-aos": "fade-zoom-in",

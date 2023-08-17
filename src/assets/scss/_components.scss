@@ -6,6 +6,7 @@
   justify-content: center;
   @media (max-width: 640px) {
     flex-direction: column-reverse;
+    justify-content: flex-end;
   }
   .header-bg-image {
     position: absolute;
@@ -37,13 +38,10 @@
       filter: none;
     }
   }
-  .show-more{
-    @media (max-width: 640px){
-      width: 80% !important;
-      max-width: 100% !important;
-      font-size: 14px !important;
-      padding-left: 12px !important;
-      padding-right: 12px !important;
+  .show-more {
+    @media (max-width: 640px) {
+      font-size: 12px !important;
+      column-gap: 4px !important;
     }
   }
   .header-container {
@@ -55,15 +53,15 @@
     margin-top: -5rem;
     @media (max-width: 640px) {
       position: relative;
-      height: 45%;
+      height: 37%;
       justify-content: unset;
-      margin-top: 0;
+      margin-top: 6rem;
       &::before {
         content: "";
         position: absolute;
         border-bottom: 8.5rem solid transparent;
         border-right: 8.2rem solid #1babe3;
-        top: 2rem;
+        top: 0;
         height: 0;
         right: -0.8rem;
         width: 5.5rem;
@@ -87,19 +85,17 @@
       text-align: left;
       column-gap: 1rem;
       font-size: 32px;
-      color: #fff;
+      color: #244a9a;
       border-radius: 1rem;
       padding: 1rem;
       max-width: 50%;
-      background: #1babe3;
       @media (max-width: 767px) {
         font-size: 26px;
         line-height: 1;
         column-gap: 10px;
         max-width: 100%;
         margin-bottom: 0 !important;
-        margin-top: 5rem !important;
-        color: #1babe3;
+        margin-top: 2rem !important;
         width: 80%;
         padding: 0;
         background: transparent;
@@ -145,7 +141,7 @@
       padding-left: 0.8rem;
       @media (max-width: 640px) {
         margin-bottom: 0;
-        margin-top: 2rem;
+        margin-top: 1rem;
         padding-left: 0.8rem;
       }
       .header-category {
@@ -170,13 +166,10 @@
             border-right: 7.5rem solid transparent;
             left: -0.8rem;
             width: 5.5rem;
-            border-radius: 12px;
-            display: none;
           }
         }
-        @media (max-width: 640px){
-          color: #1babe3 !important;
-          margin-top: 0;
+        @media (max-width: 640px) {
+          margin-top: 1rem;
         }
         img {
           width: 50px;
@@ -186,8 +179,6 @@
             width: 35px;
             height: 35px;
             object-fit: contain;
-            filter: invert(46%) sepia(86%) saturate(530%) hue-rotate(151deg)
-              brightness(108%) contrast(85%);
           }
         }
       }
@@ -983,10 +974,10 @@
 }
 
 @keyframes beforAnimation {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
