@@ -6,6 +6,11 @@
     bottom: 0;
     right: 0;
   }
+  .footer-logo {
+    @media (max-width: 767px) {
+      max-width: 220px;
+    }
+  }
   .footer-boxes {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

@@ -138,6 +138,10 @@ const NavbarIcons = () => {
               src={logo}
               alt=""
             />
+            <div className="mt-2 leading-[16px] font-400 text-center text-[#333]">
+              Хотите, чтобы оператор call-центра связался с вами в течение 3
+              минут?
+            </div>
             <div className="flex flex-col gap-6  mt-6">
               <TextField
                 className="w-full"
