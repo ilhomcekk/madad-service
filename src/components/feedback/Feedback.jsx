@@ -98,7 +98,7 @@ const Feedback = () => {
           title={
             <TranslationApi
               ru="ОБРАТНАЯ СВЯЗЬ"
-              uz="QAYTA ALOQA"
+              uz="BIZ BILAN BOG'LANISH"
               en="FEEDBACK"
             />
           }

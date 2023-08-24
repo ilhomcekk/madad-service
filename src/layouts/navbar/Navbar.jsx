@@ -263,8 +263,12 @@ const Navbar = () => {
               alt=""
             />
             <div className="mt-2 leading-[16px] font-400 text-center text-[#333]">
-              Хотите, чтобы оператор call-центра связался с вами в течение 3
-              минут?
+              <TranslationApi
+                ru="Хотите, чтобы оператор call-центра связался с вами в течение 3
+              минут?"
+                uz="Call-markaz operatori siz bilan 3 daqiqa ichida bog‘lanishini xohlaysizmi?"
+                en="Do you want a call center operator to contact you within 3 minutes?"
+              />
             </div>
             <div className="flex flex-col gap-6  mt-6">
               <TextField

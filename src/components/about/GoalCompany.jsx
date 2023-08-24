@@ -20,7 +20,7 @@ const GoalCompany = () => {
           title={
             <TranslationApi
               ru="ОСНОВНАЯ ЦЕЛЬ"
-              uz="ASOSIY MAQSAD"
+              uz="KOMPANIYANING ASOSIY"
               en="PRIMARY GOAL"
             />
           }
@@ -34,7 +34,7 @@ const GoalCompany = () => {
           }}
           className="relative md:text-end"
           title={
-            <TranslationApi ru="КОМПАНИИ" uz="KOMPANIYALAR" en="COMPANIES" />
+            <TranslationApi ru="КОМПАНИИ" uz="MAQSADLARI" en="COMPANIES" />
           }
         />
         <div className="goal-boxes lg:flex">

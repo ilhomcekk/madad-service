@@ -17,7 +17,7 @@ const TarifCart = ({ cart, handleClick }) => {
       <div className="tarif-subtitle">
         <TranslationApi
           ru="Что входит:"
-          uz="Nima kiradi:"
+          uz="Nimalar bo'ladi:"
           en="What is included:"
         />
       </div>

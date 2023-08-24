@@ -42,7 +42,7 @@ const Direction = () => {
             <div className="left__title">
               <TranslationApi
                 ru="НАШИ НАПРАВЛЕНИЯ"
-                uz="BIZNING YO'LLARIMIZ"
+                uz="BIZNING YO'NALISHLAR"
                 en="OUR DIRECTIONS"
               />
             </div>
@@ -173,9 +173,9 @@ const Direction = () => {
                 data-aos-delay="1200"
               >
                 <TranslationApi
-                  ru={tab?.name_ru?.slice(0, 10)}
-                  uz={tab?.name_uz?.slice(0, 10)}
-                  en={tab?.name_en?.slice(0, 10)}
+                  ru={tab?.name_ru?.substring(0, tab?.name_ru?.indexOf(" "))}
+                  uz={tab?.name_uz?.substring(0, tab?.name_uz?.indexOf(" "))}
+                  en={tab?.name_en?.substring(0, tab?.name_en?.indexOf(" "))}
                 />
               </div>
             </div>
@@ -186,9 +186,9 @@ const Direction = () => {
               data-aos-delay="1500"
             >
               <TranslationApi
-                ru={tab?.name_ru?.slice(10, tab?.name_ru?.length - 0)}
-                uz={tab?.name_uz?.slice(10, tab?.name_uz?.length - 0)}
-                en={tab?.name_en?.slice(10, tab?.name_en?.length - 0)}
+                ru={tab?.name_ru?.substring(tab?.name_ru?.indexOf(" ") + 1)}
+                uz={tab?.name_uz?.substring(tab?.name_uz?.indexOf(" ") + 1)}
+                en={tab?.name_en?.substring(tab?.name_en?.indexOf(" ") + 1)}
               />
             </div>
             {desc && (
