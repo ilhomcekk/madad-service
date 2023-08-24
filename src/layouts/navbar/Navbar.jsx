@@ -212,12 +212,12 @@ const Navbar = () => {
           >
             <AiOutlineCloseCircle size={32} color="#fff" />
           </IconButton>
-          <TextField
+          {/* <TextField
             className="menu-search !mx-4"
             id="standard-basic"
             label="Поиск"
             variant="standard"
-          />
+          /> */}
           <div className="bars-list">
             <Link to="/offer">
               <TranslationApi ru="Услуги" uz="Xizmatlar" en="Services" />
