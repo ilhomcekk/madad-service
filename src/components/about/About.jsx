@@ -91,13 +91,13 @@ const About = () => {
               <div className="item__text">
                 <TranslationApi
                   ru={
-                    "Квартирные, офисные и дачные переезды– это наша ежедневная работа и мы настоящие профессионалы своего дела. Перевозка, организованная нашей компанией это полноценный переезд «подключ», а не просто несколько грузчиков и газель. Мы поможем вам с упаковкой личных вещей, сборкой-разборкой мебели и подключением бытовой техники. По приезду в новую квартиру или офис, вся ваша мебель будет собрана и вместе с вещами расставлена по своим местам."
+                    "Madad service - компания, охватившая 4 направления в сфере предоставления услуг. Клининговые услуги, кейтеринг, промышленный альпинизм и грузоперевозка при крупных переездах - все эти услуги вы можете найти в одном месте, а именно у нас! Мы предоставляем лучший сервис в Узбекистане!"
                   }
                   uz={
-                    "Kvartira, ofis va qishloqni ko'chirish bizning kundalik ishimiz va biz o'z sohamizning haqiqiy professionallarimiz. Kompaniyamiz tomonidan tashkil etilgan transport - bu faqat bir nechta yuk ko'taruvchi va gazel emas, balki to'liq kalitli ko'chirishdir. Biz sizga shaxsiy buyumlarni qadoqlash, mebellarni yig'ish va demontaj qilish va maishiy texnikani ulashda yordam beramiz. Yangi kvartira yoki ofisga kelganingizdan so'ng, sizning barcha mebellaringiz yig'iladi va o'z joylaridagi narsalar bilan birlashtiriladi."
+                    "“Madad servis” – xizmat ko‘rsatish sohasida 4 ta yo‘nalishni o‘z ichiga olgan kompaniya. Tozalash xizmatlari, ovqatlanish, sanoat alpinizmi va yirik yuk tashish uchun yuk tashish - bu xizmatlarning barchasini bir joyda, ya'ni bizda topishingiz mumkin! Biz O'zbekistonda eng zo'r xizmatni taqdim etamiz!"
                   }
                   en={
-                    "Apartment, office and country moving is our daily work and we are true professionals in our field. Transportation organized by our company is a full-fledged turnkey move, and not just a few loaders and a gazelle. We will help you with packing personal items, assembling and disassembling furniture and connecting household appliances. Upon arrival at a new apartment or office, all your furniture will be collected and put together with things in their places."
+                    "Madad service is a company covering 4 directions in the field of service provision. Cleaning services, catering, industrial mountaineering and cargo transportation for large moves - you can find all these services in one place, namely with us! We provide the best service in Uzbekistan!"
                   }
                 />
               </div>
