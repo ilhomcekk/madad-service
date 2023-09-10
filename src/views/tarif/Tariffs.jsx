@@ -20,6 +20,8 @@ import { getTariffsServicesByCategory } from "../../redux/actions/tariffsService
 import TarifModal from "../../components/modal/TarifModal";
 import { setTarifStep } from "../../redux/actions/telegramActions";
 import TranslationApi from "../../components/translation/TranslationApi";
+import TarifServicesCart from "../../components/carts/TarifServicesCart";
+import { cateringTarifServices, cleaningTarifServices } from "./list";
 const API = "https://api.madad-service.uz/";
 
 const Tariffs = () => {
@@ -120,7 +122,7 @@ const Tariffs = () => {
             </div>
           </Container>
         </div>
-        <section className="about">
+        <section className="about z-[1]">
           <Container>
             <Title
               title={
@@ -169,27 +171,29 @@ const Tariffs = () => {
             src={tarifAbsoluteImage}
             alt=""
           />
-          <Container>
-            <Title
-              title={<TranslationApi ru="ТАРИФНЫЕ" uz="TARIFF" en="TARIFF" />}
-            />
-            <Title
-              className="text-center"
-              title={<TranslationApi ru="ПЛАНЫ" uz="PLANLAR" en="PLANS" />}
-            />
-            <Slider className="tariffs-slick pt-12 pb-32" {...settings}>
-              {tariffsByServicesId?.map((item, idx) => (
-                <TarifCart
-                  cart={item}
-                  key={idx}
-                  handleClick={() => {
-                    dispatch(setTarifStep());
-                    setModaldata(item);
-                  }}
-                />
-              ))}
-            </Slider>
-          </Container>
+          {tariffsByServicesId?.length > 0 && (
+            <Container>
+              <Title
+                title={<TranslationApi ru="ТАРИФНЫЕ" uz="TARIFF" en="TARIFF" />}
+              />
+              <Title
+                className="text-center"
+                title={<TranslationApi ru="ПЛАНЫ" uz="PLANLAR" en="PLANS" />}
+              />
+              <Slider className="tariffs-slick pt-12 pb-32" {...settings}>
+                {tariffsByServicesId?.map((item, idx) => (
+                  <TarifCart
+                    cart={item}
+                    key={idx}
+                    handleClick={() => {
+                      dispatch(setTarifStep());
+                      setModaldata(item);
+                    }}
+                  />
+                ))}
+              </Slider>
+            </Container>
+          )}
         </section>
         <Container className="relative">
           <Title
@@ -203,46 +207,19 @@ const Tariffs = () => {
             }
           />
           <div className="grid md:grid-cols-2 gap-6 mt-12 mb-24">
-            {tariffsServices?.map((item, idx) => (
-              <div
-                key={idx}
-                style={{
-                  boxShadow: "0px 1px 17px rgba(198, 198, 198, 0.31)",
-                  borderRadius: "20px",
-                }}
-                className="bg-white grid grid-cols-3 md:gap-4 gap-2 md:p-6 px-2 py-6"
-              >
-                <LazyLoadImage
-                  style={{
-                    borderRadius: "20px",
-                    width: "100%",
-                    objectFit: "contain",
-                    maxHeight: "155px",
-                  }}
-                  src={API + item?.photo}
-                  alt=""
-                />
-                <div className="col-span-2">
-                  <div className="text-xl md:mb-3">
-                    <TranslationApi
-                      uz={item?.name_uz}
-                      ru={item?.name_ru}
-                      en={item?.name_en}
-                    />
-                  </div>
-                  <div
-                    className="md:text-lg color-gray font-400"
-                    style={{ lineHeight: "1.2" }}
-                  >
-                    <TranslationApi
-                      uz={HTMLReactParser(String(item?.description_uz))}
-                      ru={HTMLReactParser(String(item?.description_ru))}
-                      en={HTMLReactParser(String(item?.description_en))}
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+            {id === "64fe1bb120cd360e5b3939c1" &&
+              cateringTarifServices?.map((item, idx) => (
+                <TarifServicesCart item={item} key={idx} />
+              ))}
+            {id === "64fe3d7d20cd360e5b393ac4" &&
+              cleaningTarifServices?.map((item, idx) => (
+                <TarifServicesCart item={item} key={idx} />
+              ))}
+            {id !== "64fe1bb120cd360e5b3939c1" &&
+              id !== "64fe3d7d20cd360e5b393ac4" &&
+              tariffsServices?.map((item, idx) => (
+                <TarifServicesCart item={item} key={idx} />
+              ))}
           </div>
         </Container>
         <Feedback />

@@ -27,7 +27,7 @@ const Home = () => {
           <Direction />
           <GoalCompany />
           <Feedback />
-          <Services />
+          {/* <Services /> */}
           <News />
           <Partners />
         </>
