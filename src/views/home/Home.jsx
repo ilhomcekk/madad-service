@@ -8,6 +8,7 @@ import Header from "../../components/header/Header";
 import News from "../../components/news/News";
 import Partners from "../../components/about/Partners";
 import PageLogo from "../../assets/images/no-home-logo.png";
+import { getCategory } from "../../redux/actions/categoryActions";
 
 const Home = () => {
   const [anim, setAnim] = useState(true);
@@ -27,7 +28,7 @@ const Home = () => {
           <Direction />
           <GoalCompany />
           <Feedback />
-          {/* <Services /> */}
+          <Services />
           <News />
           <Partners />
         </>

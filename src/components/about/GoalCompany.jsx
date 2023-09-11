@@ -95,12 +95,9 @@ const GoalCompany = () => {
               </div>
               <div className="card__text">
                 <TranslationApi
-                  ru="Мы поможем вам с упаковкой личных вещей, сборкой-разборкой
-                мебели и подключением бытовой техники"
-                  uz="Biz sizga shaxsiy buyumlarni qadoqlash, yig'ish va demontaj qilishda yordam beramiz
-                 mebel va maishiy texnika"
-                  en="We will help you with the packing of personal belongings, assembly and disassembly
-                 furniture and household appliances"
+                  ru="Мы предоставляем лучший сервис в стране"
+                  uz="Biz mamlakatdagi eng yaxshi xizmatni taqdim etamiz"
+                  en="We provide the best service in the country"
                 />
               </div>
             </div>

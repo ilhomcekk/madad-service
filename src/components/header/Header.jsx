@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    getCategory();
+    dispatch(getCategory());
   }, []);
 
   return (

@@ -79,11 +79,12 @@ const Partners = () => {
               data-aos-duration="900"
               data-aos-delay="300"
             >
-              {/* <LazyLoadImage
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqQe8JhxoXjy2_lve779pbB0AlaR-rm4bHA&usqp=CAU"
-                alt=""
-              /> */}
-              <LazyLoadImage src={API + item?.photo} alt="" />
+              <div className="flip-inner">
+                <div className="flip-image">
+                  <LazyLoadImage src={API + item?.photo} alt="" />
+                </div>
+                <div class="flip-card-back">{item?.name}</div>
+              </div>
             </a>
           ))}
         </Slider>

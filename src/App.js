@@ -12,7 +12,7 @@ import Offer from "./views/offer/Offer";
 import Tariffs from "./views/tarif/Tariffs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NewsSearch from "./views/news/NewsSearch";
@@ -20,6 +20,7 @@ import OfferDetail from "./views/offer/OfferDetail";
 import TarifModal from "./components/modal/TarifModal";
 import { setTarifStep } from "./redux/actions/telegramActions";
 import { useDispatch } from "react-redux";
+import { getCategory } from "./redux/actions/categoryActions";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -56,18 +57,18 @@ const App = () => {
       <ScrollToTop />
       <ToastContainer position="top-right" />
       <TarifModal data={modalData} />
-        <Routes path="/">
-          <Route path="/" element={<Home />} />
-          <Route path="/offer" element={<Offer />} />
-          <Route path="/offer/:id" element={<OfferDetail />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/news/search/:slug" element={<NewsSearch />} />
-          <Route path="/news/:id" element={<NewsDetail />} />
-          <Route path="/agreement" element={<Agreement />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/tariffs/:id" element={<Tariffs />} />
-        </Routes>
+      <Routes path="/">
+        <Route path="/" element={<Home />} />
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/offer/:id" element={<OfferDetail />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/news/search/:slug" element={<NewsSearch />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
+        <Route path="/agreement" element={<Agreement />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/tariffs/:id" element={<Tariffs />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
