@@ -30,7 +30,7 @@ const Services = () => {
   );
 
   return (
-    <section className="services h-0 overflow-hidden !p-0">
+    <section className="services">
       <LazyLoadImage
         className="services-absolute-image"
         src={serviceAbsoluteImage}

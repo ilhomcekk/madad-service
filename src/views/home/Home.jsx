@@ -28,7 +28,9 @@ const Home = () => {
           <Direction />
           <GoalCompany />
           <Feedback />
-          <Services />
+          <div className="h-0 overflow-hidden !p-0">
+            <Services />
+          </div>
           <News />
           <Partners />
         </>
