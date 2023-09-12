@@ -159,66 +159,6 @@ export const gruzoperevozkaTarifServices = [
     description_uz: "",
     description_en: "",
   },
-  {
-    image: TeleskopicheskiShvabra,
-    name_ru: "ТЕЛЕСКОПИЧЕСКАЯ ШТАНГА",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "В комплект входят: штанга и ее щетка, водяной насос Доступно в любом количестве <br />Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
-  {
-    image: Rotor,
-    name_ru: "РОТОР",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "Модель: Baiyun<br/>Тип щетки: для ковров, для брусчатки Доступно в любом количестве <br/>Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
-  {
-    image: Karcher,
-    name_ru: "КАРЧЕР",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "Модель: GIDROX <br/> Доступно в любом количестве. <br/>Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
-  {
-    image: Parogenerator,
-    name_ru: "ПАРОГЕНЕРАТОР",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "Модель:  KARCHER <br /> Доступно в любом количестве Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
-  {
-    image: Lestnisa,
-    name_ru: "ЛЕСТНИЦА",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "Размеры: 2 метр, 3.5 метр, трансформер Доступно в любом количестве <br />Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
-  {
-    image: Shlang,
-    name_ru: "ШЛАНГ",
-    name_uz: "",
-    name_en: "",
-    description_ru:
-      "Размеры:  40 метр <br /> Доступно в любом количестве Заявки принимаются 24/7",
-    description_uz: "",
-    description_en: "",
-  },
 ];
 
 // {
