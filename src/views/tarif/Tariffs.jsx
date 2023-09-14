@@ -51,12 +51,7 @@ const Tariffs = () => {
           limit: 24,
         })
       );
-      dispatch(
-        getTariffsServicesByCategory(service?.category?._id, {
-          page: 1,
-          limit: 24,
-        })
-      );
+      dispatch(getTariffsServicesByCategory(service?._id));
     }
   }, [service]);
 
