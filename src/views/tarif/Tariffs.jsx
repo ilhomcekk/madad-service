@@ -207,24 +207,9 @@ const Tariffs = () => {
             }
           />
           <div className="grid md:grid-cols-2 gap-6 mt-12 mb-24">
-            {id === "64fe1bb120cd360e5b3939c1" &&
-              cateringTarifServices?.map((item, idx) => (
-                <TarifServicesCart item={item} key={idx} />
-              ))}
-            {id === "64fe3d7d20cd360e5b393ac4" &&
-              cleaningTarifServices?.map((item, idx) => (
-                <TarifServicesCart item={item} key={idx} />
-              ))}
-            {id === "650003b3e22bf4ae71a789b9" &&
-              gruzoperevozkaTarifServices?.map((item, idx) => (
-                <TarifServicesCart item={item} key={idx} />
-              ))}
-            {id !== "64fe1bb120cd360e5b3939c1" &&
-              id !== "64fe3d7d20cd360e5b393ac4" &&
-              id !== "650003b3e22bf4ae71a789b9" &&
-              tariffsServices?.map((item, idx) => (
-                <TarifServicesCart item={item} key={idx} />
-              ))}
+            {tariffsServices?.map((item, idx) => (
+              <TarifServicesCart item={item} key={idx} />
+            ))}
           </div>
         </Container>
         <Feedback />
