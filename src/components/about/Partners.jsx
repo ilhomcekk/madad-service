@@ -83,7 +83,7 @@ const Partners = () => {
                 <div className="flip-image">
                   <LazyLoadImage src={API + item?.photo} alt="" />
                 </div>
-                <div class="flip-card-back">{item?.name}</div>
+                <div className="flip-card-back">{item?.name}</div>
               </div>
             </a>
           ))}
