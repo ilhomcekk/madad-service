@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../assets/scss/_components.scss";
 // import bgImage from "../../assets/images/header.png";
@@ -32,6 +32,12 @@ const Header = () => {
     },
   });
   const categories = useSelector((state) => state.category.category);
+
+  const categoriesFilter = useMemo(
+    () =>
+      categories?.filter((item) => item?._id !== "6584748edca74d270e0835ec"),
+    [categories]
+  );
 
   const handleClick = () => {
     dispatch(setTarifStep());
@@ -105,7 +111,7 @@ const Header = () => {
             </a>
           </div>
           <div className="header-inner grid grid-cols-2 md:gap-6 gap-x-2 gap-y-3">
-            {categories?.map((item, idx) => (
+            {categoriesFilter?.map((item, idx) => (
               <div
                 key={idx}
                 to={"/offer/" + item?._id}

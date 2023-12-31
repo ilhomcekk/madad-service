@@ -33,18 +33,15 @@ const Direction = () => {
   );
   const services = useSelector((state) => state.services.services);
   const [tab, setTab] = useState();
-  const [desc, setDesc] = useState();
+  const desc = useMemo(
+    () => services?.find((item) => item?.category?._id === tab?._id),
+    [services]
+  );
   useEffect(() => {
     setTab(list2);
   }, [list]);
 
-  const handleService = async () => {
-    const filter = await services?.find(
-      (item) => item?.category?._id === tab?._id
-    );
-    setDesc(filter);
-  };
-  handleService();
+  console.log(tab);
 
   return (
     <section className="direction">
