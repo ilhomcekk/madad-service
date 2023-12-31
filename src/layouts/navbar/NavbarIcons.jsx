@@ -126,7 +126,7 @@ const NavbarIcons = () => {
       </div>
       <div>
         <Modal
-          open={modal}
+          open={modal || false}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"

@@ -1,4 +1,3 @@
-import React from "react";
 const language = window.localStorage.getItem("madad-Content-Language");
 
 const TranslationApi = ({ uz, ru, en }) => {
@@ -11,6 +10,8 @@ const TranslationApi = ({ uz, ru, en }) => {
   }
   if (language === "en") {
     field = en;
+  } else {
+    field = ru;
   }
   return field;
 };

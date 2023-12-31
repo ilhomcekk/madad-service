@@ -26,6 +26,7 @@ import {
   cleaningTarifServices,
   gruzoperevozkaTarifServices,
 } from "./list";
+import { Helmet } from "react-helmet";
 const API = "https://api.madad-service.uz/";
 
 const Tariffs = () => {
@@ -100,6 +101,11 @@ const Tariffs = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{service?.name_ru}</title>
+        <meta name="description" content={service?.description_ru} />
+        <meta name="title" content={service?.name_ru} />
+      </Helmet>
       <div className="content">
         <div
           className="tarif-header"

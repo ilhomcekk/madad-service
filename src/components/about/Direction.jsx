@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Container } from "@mui/system";
 import direction1 from "../../assets/images/direction-1.svg";
 import direction2 from "../../assets/images/direction-2.svg";
@@ -15,11 +15,27 @@ const API = "https://api.madad-service.uz/";
 
 const Direction = () => {
   const list = useSelector((state) => state.category.category);
+  const list1 = useMemo(
+    () => list?.find((item) => item?._id === "64abfb066bfd48f1136090b2"),
+    [list]
+  );
+  const list2 = useMemo(
+    () => list?.find((item) => item?._id === "64abfae56bfd48f1136090ad"),
+    [list]
+  );
+  const list3 = useMemo(
+    () => list?.find((item) => item?._id === "64abfaa56bfd48f1136090a8"),
+    [list]
+  );
+  const list4 = useMemo(
+    () => list?.find((item) => item?._id === "64abfa6b6bfd48f1136090a3"),
+    [list]
+  );
   const services = useSelector((state) => state.services.services);
   const [tab, setTab] = useState();
   const [desc, setDesc] = useState();
   useEffect(() => {
-    setTab(list[1]);
+    setTab(list2);
   }, [list]);
 
   const handleService = async () => {
@@ -50,73 +66,69 @@ const Direction = () => {
               {list && (
                 <>
                   <div className="left__box">
-                    {list[0] && (
+                    {list1 && (
                       <div
                         className={`box ${
-                          tab?._id === list[0]?._id && "active"
+                          tab?._id === list1?._id && "active"
                         } right-border`}
-                        onClick={() => setTab(list[0])}
+                        onClick={() => setTab(list1)}
                       >
                         <div className="image">
-                          <LazyLoadImage src={API + list[0]?.photo} alt="" />
+                          <LazyLoadImage src={API + list1?.photo} alt="" />
                         </div>
                         <TranslationApi
-                          uz={list[0]?.name_uz}
-                          ru={list[0]?.name_ru}
-                          en={list[0]?.name_en}
+                          uz={list1?.name_uz}
+                          ru={list1?.name_ru}
+                          en={list1?.name_en}
                         />
                       </div>
                     )}
-                    {list[1] && (
+                    {list2 && (
                       <div
-                        className={`box ${
-                          tab?._id === list[1]?._id && "active"
-                        }`}
-                        onClick={() => setTab(list[1])}
+                        className={`box ${tab?._id === list2?._id && "active"}`}
+                        onClick={() => setTab(list2)}
                       >
                         <div className="image">
-                          <LazyLoadImage src={API + list[1]?.photo} alt="" />
+                          <LazyLoadImage src={API + list2?.photo} alt="" />
                         </div>
                         <TranslationApi
-                          uz={list[1]?.name_uz}
-                          ru={list[1]?.name_ru}
-                          en={list[1]?.name_en}
+                          uz={list2?.name_uz}
+                          ru={list2?.name_ru}
+                          en={list2?.name_en}
                         />
                       </div>
                     )}
                   </div>
                   <div className="left__box">
-                    {list[2] && (
+                    {list3 && (
                       <div
                         className={`box ${
-                          tab?._id === list[2]?._id && "active"
+                          tab?._id === list3?._id && "active"
                         } right-border`}
-                        onClick={() => setTab(list[2])}
+                        onClick={() => setTab(list3)}
                       >
                         <div className="image">
-                          <LazyLoadImage src={API + list[2]?.photo} alt="" />
+                          <LazyLoadImage src={API + list3?.photo} alt="" />
                         </div>
                         <TranslationApi
-                          uz={list[2]?.name_uz}
-                          ru={list[2]?.name_ru}
-                          en={list[2]?.name_en}
+                          uz={list3?.name_uz}
+                          ru={list3?.name_ru}
+                          en={list3?.name_en}
                         />
                       </div>
                     )}
-                    {list[3] && (
+                    {list4 && (
                       <div
-                        className={`box ${
-                          tab?._id === list[3]?._id && "active"
-                        }`}
-                        onClick={() => setTab(list[3])}
+                        className={`box ${tab?._id === list4?._id && "active"}`}
+                        onClick={() => setTab(list4)}
                       >
                         <div className="image">
-                          <LazyLoadImage src={API + list[3]?.photo} alt="" />
+                          <LazyLoadImage src={API + list4?.photo} alt="" />
                         </div>
                         <TranslationApi
-                          uz={list[3]?.name_uz}
-                          ru={list[3]?.name_ru}
-                          en={list[3]?.name_en}
+                          uz={list4?.name_uz}
+                          ru={list4?.name_ru}
+                          en={list4?.name_en}
                         />
                       </div>
                     )}

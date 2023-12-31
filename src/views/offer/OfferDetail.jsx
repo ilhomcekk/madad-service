@@ -16,6 +16,7 @@ import TranslationApi from "../../components/translation/TranslationApi";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import OfferServices from "../../components/services/OfferServices";
+import { Helmet } from "react-helmet";
 const API = "https://api.madad-service.uz/";
 
 const OfferDetail = () => {
@@ -30,9 +31,7 @@ const OfferDetail = () => {
 
   const advertising = useSelector((state) => state.advertising.advertising);
   const handleFilter = () => {
-    let filter = advertising?.filter(
-      (item) => item?.category?._id === id
-    );
+    let filter = advertising?.filter((item) => item?.category?._id === id);
     if (filter?.length > 0) setAdvertisingByCategory(filter);
   };
 
@@ -61,31 +60,38 @@ const OfferDetail = () => {
   };
 
   return (
-    <div className="content">
-      <Slider className="offer-slick" {...settings}>
-        {advertisingByCategory?.map((item, idx) => (
-          <div className="offer-slide" key={idx}>
-            {/* <LazyLoadImage src={offerSlide} alt="" /> */}
-            <LazyLoadImage src={API + item?.photo} alt="" />
-            <Container className="offer-slide-container">
-              <div className="offer-slick-title">
-                {
-                  <TranslationApi
-                    uz={item?.name_uz}
-                    ru={item?.name_ru}
-                    en={item?.name_en}
-                  />
-                }
-              </div>
-            </Container>
-          </div>
-        ))}
-      </Slider>
-      <OfferComponent />
-      <OfferServices />
-      {/* <Services /> */}
-      <Feedback />
-    </div>
+    <>
+      <Helmet>
+        <title>Yangi Sarlavha</title>
+        <meta name="description" content="Sahifa haqida qisqacha ma'lumot" />
+        {/* Boshqa meta teglarini yoki linklarni qo'shishingiz mumkin */}
+      </Helmet>
+      <div className="content">
+        <Slider className="offer-slick" {...settings}>
+          {advertisingByCategory?.map((item, idx) => (
+            <div className="offer-slide" key={idx}>
+              {/* <LazyLoadImage src={offerSlide} alt="" /> */}
+              <LazyLoadImage src={API + item?.photo} alt="" />
+              <Container className="offer-slide-container">
+                <div className="offer-slick-title">
+                  {
+                    <TranslationApi
+                      uz={item?.name_uz}
+                      ru={item?.name_ru}
+                      en={item?.name_en}
+                    />
+                  }
+                </div>
+              </Container>
+            </div>
+          ))}
+        </Slider>
+        <OfferComponent />
+        <OfferServices />
+        {/* <Services /> */}
+        <Feedback />
+      </div>
+    </>
   );
 };
 

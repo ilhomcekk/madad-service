@@ -19,7 +19,6 @@ import {
 } from "@mui/material";
 import { CiMenuFries } from "react-icons/ci";
 import { AiOutlineCloseCircle, AiOutlinePercentage } from "react-icons/ai";
-import { useTranslation } from "react-i18next";
 import NavbarIcons from "./NavbarIcons";
 import { BsTelephone } from "react-icons/bs";
 import { toast } from "react-toastify";
@@ -44,7 +43,6 @@ const style = {
 const Navbar = () => {
   const dispatch = useDispatch();
   const myRef = useRef();
-  const { t } = useTranslation();
   const [openMenuBars, setOpenMenuBars] = useState(false);
   const location = useLocation();
   const { pathname } = location;
