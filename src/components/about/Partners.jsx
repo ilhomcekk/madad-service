@@ -13,6 +13,10 @@ import { getPartners } from "../../redux/actions/partnersActions";
 import TranslationApi from "../translation/TranslationApi";
 const API = "https://api.madad-service.uz/";
 
+const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
+  <Button {...props}>{children}</Button>
+);
+
 const Partners = () => {
   const dispatch = useDispatch();
 
@@ -29,15 +33,17 @@ const Partners = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: (
-      <Button>
+      <SlickButtonFix>
         <BsArrowRight />
-      </Button>
+      </SlickButtonFix>
     ),
     prevArrow: (
-      <Button>
+      <SlickButtonFix>
         <BsArrowLeft />
-      </Button>
+      </SlickButtonFix>
     ),
+    currentslide: 0,
+    slidecount: partners?.length,
     responsive: [
       {
         breakpoint: 1000,

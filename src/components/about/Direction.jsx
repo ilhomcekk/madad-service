@@ -41,8 +41,6 @@ const Direction = () => {
     setTab(list2);
   }, [list]);
 
-  console.log(tab);
-
   return (
     <section className="direction">
       <Container className="lg:!ml-0 lg:!pl-0">
